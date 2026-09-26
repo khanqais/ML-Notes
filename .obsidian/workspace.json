@@ -185,14 +185,15 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
+    "Untitled/Bias and Variance/Bias and Variance.md",
     "Pasted image 20260926162552.png",
     "Untitled/Bias and Variance/True Relationship.md",
-    "Untitled/Bias and Variance/Bias and Variance.md",
     "Untitled/Bias and Variance/Untitled.md",
     "Pasted image 20260926162343.png",
     "Untitled/Linear Regression/Linear regression.md",
