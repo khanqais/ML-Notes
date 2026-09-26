@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Bias and Variance/Theory.md",
+                "file": "ML/Bias and Variance/Bias and Variance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Theory"
+              "title": "Bias and Variance"
             }
           }
         ]
@@ -175,5 +175,10 @@
     }
   },
   "active": "108079dab7476239",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "ML/Bias and Variance/Theory.md",
+    "ML/Bias and Variance/Bias and Variance.md",
+    "ML/Logistic Regression/Logistic Regression.md",
+    "ML/Linear Regression/Linear Regression.md"
+  ]
 }
