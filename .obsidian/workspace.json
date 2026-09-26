@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Logistic Regression/Theory.md",
+                "file": "ML/Bias and Variance/Bias and Variance.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Theory"
+              "title": "Bias and Variance"
             }
           }
         ]
@@ -99,7 +99,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Logistic Regression/Theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +117,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML/Logistic Regression/Theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +159,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Logistic Regression/Theory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -191,18 +188,19 @@
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
+    "ML/Linear Regression/Linear Regression.md",
+    "ML/Bias and Variance/True Relationship.md",
+    "ML/Bias and Variance/Bias and Variance.md",
+    "ML/Bias and Variance/Theory.md",
+    "ML/Logistic Regression/Logistic Regression.md",
     "Attachments/Pasted image 20260926171442.png",
     "Attachments/Pasted image 20260926170928.png",
-    "ML/Bias and Variance/Theory.md",
-    "ML/Linear Regression/Theory.md",
-    "ML/Logistic Regression/Theory.md",
     "ML/Logistic Regression",
     "Attachments/Pasted image 20260926170701.png",
     "Attachments/Pasted image 20260926162343.png",
     "Attachments",
     "Attachments/Pasted image 20260926121027.png",
     "Attachments/Pasted image 20260926162552.png",
-    "ML/Bias and Variance/True Relationship.md",
     "Attachments/Pasted image 20260926120944.png",
     "Untitled/Bias and Variance/Untitled.md",
     "ML/Bias and Variance",
