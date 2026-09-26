@@ -19,4 +19,6 @@ In contrast, the Straight Line has relatively | high bias, since it can not capt
 
 Three commonly used methods for finding the sweet spot between simple and complicated models are: regularization, boosting and bagging.
 
+Changes from tablet
+
 
