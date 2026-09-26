@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Linear Regression/Linear regression.md",
+                "file": "ML/Logistic Regression/Theory.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linear regression"
+              "title": "Theory"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML/Linear Regression/Linear regression.md",
+                "file": "ML/Logistic Regression/Theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML/Linear Regression/Linear regression.md",
+                "file": "ML/Logistic Regression/Theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML/Linear Regression/Linear regression.md",
+                "file": "ML/Logistic Regression/Theory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -191,10 +191,14 @@
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20260926171442.png",
+    "Attachments/Pasted image 20260926170928.png",
+    "ML/Bias and Variance/Theory.md",
+    "ML/Linear Regression/Theory.md",
+    "ML/Logistic Regression/Theory.md",
+    "ML/Logistic Regression",
     "Attachments/Pasted image 20260926170701.png",
-    "ML/Bias and Variance/Bias and Variance.md",
     "Attachments/Pasted image 20260926162343.png",
-    "ML/Linear Regression/Linear regression.md",
     "Attachments",
     "Attachments/Pasted image 20260926121027.png",
     "Attachments/Pasted image 20260926162552.png",
