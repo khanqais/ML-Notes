@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled/Bias and Variance/Bias and Variance.md",
+                "file": "ML/Linear Regression/Linear regression.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bias and Variance"
+              "title": "Linear regression"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 210.83334350585938
   },
   "right": {
     "id": "7d2c3ace1addb501",
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled/Bias and Variance/Bias and Variance.md",
+                "file": "ML/Linear Regression/Linear regression.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled/Bias and Variance/Bias and Variance.md",
+                "file": "ML/Linear Regression/Linear regression.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled/Bias and Variance/Bias and Variance.md",
+                "file": "ML/Linear Regression/Linear regression.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -174,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -191,19 +191,21 @@
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
-    "Untitled/Bias and Variance/Bias and Variance.md",
-    "Pasted image 20260926162552.png",
-    "Untitled/Bias and Variance/True Relationship.md",
+    "Attachments/Pasted image 20260926170701.png",
+    "ML/Bias and Variance/Bias and Variance.md",
+    "Attachments/Pasted image 20260926162343.png",
+    "ML/Linear Regression/Linear regression.md",
+    "Attachments",
+    "Attachments/Pasted image 20260926121027.png",
+    "Attachments/Pasted image 20260926162552.png",
+    "ML/Bias and Variance/True Relationship.md",
+    "Attachments/Pasted image 20260926120944.png",
     "Untitled/Bias and Variance/Untitled.md",
-    "Pasted image 20260926162343.png",
-    "Untitled/Linear Regression/Linear regression.md",
-    "Untitled/Bias and Variance",
+    "ML/Bias and Variance",
     "Untitled/Untitled.md",
-    "Untitled/Linear Regression",
-    "Untitled/Linear Regression/Pasted image 20260926121027.png",
-    "Untitled/Linear Regression/Pasted image 20260926124750.png",
-    "Untitled/Linear Regression/Pasted image 20260926120944.png",
-    "Untitled",
+    "ML/Linear Regression",
+    "Attachments/Pasted image 20260926124750.png",
+    "ML",
     "Welcome.md"
   ]
 }
