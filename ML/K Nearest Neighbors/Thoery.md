@@ -11,3 +11,14 @@ knn() forms predictions using a single command. The function requires four input
 ![[Pasted image 20260928162232.png|457]]
 If we take the value of k=3 then we the new value star will be class B but if we take the value of k=6 then the star will belong to class A.
 
+Pros:
+- Very simple 
+- Training is trivial 
+- Works with any number of classes 
+- Easy to add more data 
+- Few parameters: K  and Distance Metric
+
+
+
+
+

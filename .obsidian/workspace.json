@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/K Nearest Neighbors/Thoery.md",
+                "file": "ML/Decision Tree and Random Forrest/Random Forrest.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Thoery"
+              "title": "Random Forrest"
             }
           }
         ]
@@ -199,9 +199,12 @@
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20260928173543.png",
+    "ML/K Nearest Neighbors/Thoery.md",
+    "ML/Decision Tree and Random Forrest/Random Forrest.md",
+    "ML/Decision Tree and Random Forrest",
     "Attachments/Pasted image 20260928162232.png",
     "ML/Evaluation Matrics/Binary Classification.md",
-    "ML/K Nearest Neighbors/Thoery.md",
     "Untitled",
     "ML/K Nearest Neighbors",
     "Attachments/Pasted image 20260928154907.png",
@@ -224,7 +227,6 @@
     "Attachments/Pasted image 20260926171442.png",
     "Attachments/Pasted image 20260926170928.png",
     "ML/Logistic Regression",
-    "Attachments/Pasted image 20260926170701.png",
     "Attachments",
     "Untitled/Bias and Variance/Untitled.md",
     "ML/Bias and Variance",
