@@ -18,5 +18,4 @@ In contrast, the Straight Line has relatively | high bias, since it can not capt
 **Overfit**: Because the Squiggly Line fits the training set really well, but not the testing set, we say that the Squiggly Line is overfit.
 
 Three commonly used methods for finding the sweet spot between simple and complicated models are: regularization, boosting and bagging.
-Heheheeheh
 
