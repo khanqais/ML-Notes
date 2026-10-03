@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"282d93f563589383","type":"file","file":"Web Security/Client-Side Security/CSRF.md","x":-520,"y":-260,"width":400,"height":400},
+		{"id":"cfe932f509b72753","x":-18,"y":-66,"width":400,"height":400,"type":"file","file":"Web Security/Client-Side Security/Content Security Policy.md"},
+		{"id":"604eb4928ae7b0a7","x":-404,"y":220,"width":400,"height":402,"type":"file","file":"Web Security/Client-Side Security/CORS.md"}
+	],
+	"edges":[
+		{"id":"0d01e460e2f5dc6a","fromNode":"604eb4928ae7b0a7","fromSide":"top","toNode":"282d93f563589383","toSide":"bottom"}
+	]
+}
