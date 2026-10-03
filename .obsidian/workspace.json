@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Evaluation and Selection/Underfitting and Overfitting.md",
+                "file": "Web Security/Client-Side Security/CSRF.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Underfitting and Overfitting"
+              "title": "CSRF"
             }
           }
         ]
@@ -199,10 +199,22 @@
   },
   "active": "e02615829eb9e889",
   "lastOpenFiles": [
+    "Web Security/Client-Side Security/XSS.md",
+    "Web Security/Client-Side Security/CSRF.md",
+    "Web Security/01 - Fundamentals/Untitled.md",
+    "Web Security/Client-Side Security",
+    "Web Security/Untitled.md",
+    "ML/Support Vector Machine/Support vectors.md",
+    "Web Security/01 - Fundamentals",
+    "Web Security",
+    "Attachments/Pasted image 20261003000244.png",
+    "Attachments/Pasted image 20261003000116.png",
+    "Attachments/Pasted image 20261002235916.png",
     "ML/Evaluation and Selection/Bias and Variance.md",
-    "ML/Evaluation and Selection/True Relationship.md",
-    "ML/Evaluation and Selection/Underfitting and Overfitting.md",
+    "ML/Support Vector Machine",
     "ML/Evaluation and Selection/Cross-Validation.md",
+    "ML/Evaluation and Selection/Underfitting and Overfitting.md",
+    "ML/Evaluation and Selection/True Relationship.md",
     "Attachments/Pasted image 20261002195110.png",
     "Attachments/Pasted image 20261002194649.png",
     "ML/Linear Regression/Linear Regression.md",
@@ -217,12 +229,8 @@
     "ML/Decision Tree and Random Forrest",
     "Attachments/Pasted image 20260928162232.png",
     "ML/Evaluation Matrics/Binary Classification.md",
-    "Untitled",
     "ML/K Nearest Neighbors",
     "Attachments/Pasted image 20260928154907.png",
-    "Attachments/Pasted image 20260928154741.png",
-    "Attachments/Pasted image 20260928153915.png",
-    "Attachments/Pasted image 20260928153047.png",
     "ML/Evaluation Matrics",
     "ML/Untitled.md",
     "ML/Seaborn Plot",
@@ -230,10 +238,7 @@
     "ML/Logistic Regression",
     "Attachments",
     "Untitled/Bias and Variance/Untitled.md",
-    "ML/Evaluation and Selection",
     "Untitled/Untitled.md",
-    "ML/Linear Regression",
-    "ML",
     "Welcome.md"
   ]
 }
