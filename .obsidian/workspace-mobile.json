@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "76b6d9a1d4ed9c80",
+        "id": "0b670e5258e47536",
         "type": "tabs",
         "children": [
           {
-            "id": "108079dab7476239",
+            "id": "eb2ad84acd068e9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Bias and Variance/Bias and Variance.md",
+                "file": "College Notes/MIS/Theory of mis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Bias and Variance"
+              "title": "Theory of mis"
             }
           }
         ]
@@ -158,9 +158,19 @@
           "icon": "lucide-list",
           "title": "Outline"
         }
+      },
+      {
+        "id": "0bb0ac314a7368c4",
+        "type": "leaf",
+        "state": {
+          "type": "git-view",
+          "state": {},
+          "icon": "lucide-ghost",
+          "title": "git-view"
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,11 +184,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "108079dab7476239",
+  "active": "eb2ad84acd068e9c",
   "lastOpenFiles": [
-    "ML/Bias and Variance/Theory.md",
-    "ML/Bias and Variance/Bias and Variance.md",
+    "ML/Evaluation and Selection/Cross-Validation.md",
+    "College Notes/MIS/Theory of mis.md",
+    "ML/Decision Tree and Random Forrest/Random Forrest.md",
+    "College Notes/BlockChain/Theory.md",
+    "College Notes/MIS",
+    "Untitled.base",
+    "Web Security/Server-Side Security/sss.md",
+    "Web Security/Server-Side Security/Broken Access Control.md",
+    "Web Security/Client-Side Security/XSS.md",
+    "Web Security/Client-Side Security/Untitled.canvas",
+    "Web Security/Client-Side Security/Content Security Policy.md",
+    "Web Security/Client-Side Security/Client-Side Validation.md",
+    "Web Security/Client-Side Security/Clickjacking.md",
+    "Web Security/Client-Side Security/CSRF.md",
+    "Web Security/Client-Side Security/CORS.md",
+    "Web Security/API Security/Rate Limiting.md",
+    "Web Security/0-Index/Index.md",
+    "ML/Support Vector Machine/Support vectors.md",
+    "ML/Evaluation and Selection/Underfitting and Overfitting.md",
+    "ML/Evaluation and Selection/True Relationship.md",
+    "ML/Evaluation and Selection/Bias and Variance.md",
+    "Attachments/Pasted image 20261003201919.png",
+    "Attachments/Pasted image 20261003000244.png",
+    "Attachments/Pasted image 20261003000116.png",
+    "Attachments/Pasted image 20261002235916.png",
+    "Attachments/Pasted image 20261002195110.png",
+    "Attachments/Pasted image 20261002194649.png",
+    "Attachments/Pasted image 20261002194316.png",
+    "Attachments/Pasted image 20261002193907.png",
+    "Web Security/Server-Side Security",
+    "Web Security/Client-Side Security",
+    "Web Security/API Security",
+    "Web Security/0-Index",
+    "ML/Support Vector Machine",
+    "ML/Evaluation and Selection",
+    "College Notes/BlockChain",
+    "Web Security",
+    "ML/K Nearest Neighbors/Thoery.md",
     "ML/Logistic Regression/Logistic Regression.md",
+    "ML/Seaborn Plot/Histplot.md",
+    "ML/Seaborn Plot/Countplot.md",
+    "ML/Evaluation Matrics/Binary Classification.md",
+    "Attachments/Pasted image 20260928173543.png",
+    "Attachments/Pasted image 20260928162232.png",
+    "ML/Bias and Variance/Bias and Variance.md",
+    "ML/Bias and Variance/Theory.md",
     "ML/Linear Regression/Linear Regression.md"
   ]
 }
