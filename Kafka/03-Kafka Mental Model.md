@@ -20,6 +20,11 @@ consumers do not remove msg from the kafka
 analytic-service -> was down for 20min ->kafka can still keep the events
 once analytics service is up again -kafka can continue from where it stopped 
 
+new service -> fraud service - read old order related event also
+producer doesnt know anything about consumer 
+![[Pasted image 20261011090322.png]]![[Pasted image 20261011090332.png|149]]
+
+
 
 
 
