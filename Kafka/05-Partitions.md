@@ -1,3 +1,4 @@
+![[Pasted image 20261011094442.png]]
 Partition - will be a ordered append only log inside the topic  
 
 
@@ -12,4 +13,5 @@ partition allows Kafka to spread events across multiple logs so multiple consume
 partitions 0: order_1001, order_1004
 partitions 1: order_1005, order_1003
 partitions 2: order_1006
+
 
