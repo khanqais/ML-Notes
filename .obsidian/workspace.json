@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Rabbitmq/Scnerio.md",
+                "file": "Database/Postgres.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scnerio"
+              "title": "Postgres"
             }
           }
         ],
@@ -212,24 +212,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "466b3c047377c093",
+  "active": "96db0ab460cfd657",
   "lastOpenFiles": [
-    "Rabbitmq/What is Rabbitmq.md",
-    "Rabbitmq/Scnerio.md",
+    "Database",
+    "Database/Postgres.md",
+    "Database/Postgres.md",
     "Kafka/11-Uses for kafka and rabbitmq.md",
-    "Rabbitmq",
     "Kafka/10-Some edge cases.md",
     "Kafka/09-Difference between kafka and rabbitmq.md",
     "Kafka/08-Consumer.md",
-    "Attachments/Pasted image 20261011123347.png",
     "Kafka/07-Producers.md",
+    "Kafka/03-Kafka Mental Model.md",
+    "Kafka/02-Queues.md",
+    "Kafka/01-Problem with Rest chain.md",
+    "Rabbitmq/Scnerio.md",
+    "Rabbitmq/What is Rabbitmq.md",
+    "Rabbitmq",
+    "Attachments/Pasted image 20261011123347.png",
     "Attachments/Pasted image 20261011122911.png",
     "Kafka/06-Offset.md",
     "Kafka/05-Partitions.md",
     "Attachments/Pasted image 20261011094442.png",
-    "Kafka/01-Problem with Rest chain.md",
-    "Kafka/02-Queues.md",
-    "Kafka/03-Kafka Mental Model.md",
     "Kafka/04-Kafka Topic Concept.md",
     "Attachments/Pasted image 20261011091641.png",
     "Daily",
@@ -239,7 +242,6 @@
     "Attachments/Pasted image 20261011081938.png",
     "Attachments/Pasted image 20261010231713.png",
     "Attachments/Pasted image 20261010230725.png",
-    "Postgres.md",
     "Kafka",
     "Projects/Tradexa Auction Platform.md",
     "Projects/DSA Revision App.md",
@@ -253,13 +255,10 @@
     "BlockChain",
     "Web Security/Server-Side Security/Broken Access Control.md",
     "Web Security/0-Index/Index.md",
-    "Web Security/API Security",
     "Web Security/Server-Side Security/sss.md",
     "Broken Access Control.md",
     "Web Security/Client-Side Security/Client-Side Validation.md",
     "Web Security/Client-Side Security/Clickjacking.md",
-    "Web Security/Client-Side Security/Untitled.canvas",
-    "Web Security/Client-Side Security/CORS.md",
-    "Web Security/Client-Side Security/Content Security Policy.md"
+    "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }

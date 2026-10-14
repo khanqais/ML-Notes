@@ -28,3 +28,10 @@ For example, an `OrderPlaced` event could be read independently by inventory, bi
     
 
 For example, when a user uploads a photo, your API can save the upload and queue a “resize image” task. A worker processes it later. If you need more capacity, add more workers to share the queued tasks
+
+For Eg :
+Go API ── publishes job message ──> RabbitMQ queue
+                                      │
+                                      └── delivers message ──> Go worker
+                                                                └── processes job
+                                                                 └── ACKs RabbitMQ
