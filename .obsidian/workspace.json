@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Database/Postgres.md",
+                "file": "ML/K Means Clustering/K means.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Postgres"
+              "title": "K means"
             }
           }
         ],
@@ -212,11 +212,21 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "96db0ab460cfd657",
+  "active": "466b3c047377c093",
   "lastOpenFiles": [
+    "Attachments/Pasted image 20261018161835.png",
+    "Attachments/Pasted image 20261018161655.png",
+    "Attachments/Pasted image 20261018161426.png",
+    "Attachments/Pasted image 20261018161310.png",
+    "Attachments/Pasted image 20261018161155.png",
+    "Attachments/Pasted image 20261018160540.png",
+    "ML/Linear Regression/Linear Regression.md",
+    "ML/K Nearest Neighbors/K Nearest Neighbors.md",
+    "ML/K Means Clustering/K means.md",
+    "ML/Support Vector Machine/Support vectors.md",
+    "ML/K Means Clustering",
+    "Database/Postgres.md",
     "Database",
-    "Database/Postgres.md",
-    "Database/Postgres.md",
     "Kafka/11-Uses for kafka and rabbitmq.md",
     "Kafka/10-Some edge cases.md",
     "Kafka/09-Difference between kafka and rabbitmq.md",
@@ -237,11 +247,6 @@
     "Attachments/Pasted image 20261011091641.png",
     "Daily",
     "Attachments/Pasted image 20261011090332.png",
-    "Attachments/Pasted image 20261011090322.png",
-    "Attachments/Pasted image 20261011085154.png",
-    "Attachments/Pasted image 20261011081938.png",
-    "Attachments/Pasted image 20261010231713.png",
-    "Attachments/Pasted image 20261010230725.png",
     "Kafka",
     "Projects/Tradexa Auction Platform.md",
     "Projects/DSA Revision App.md",
@@ -252,13 +257,9 @@
     "Web Security/API Security/Rate Limiting.md",
     "College Notes/BlockChain",
     "College Notes",
-    "BlockChain",
     "Web Security/Server-Side Security/Broken Access Control.md",
     "Web Security/0-Index/Index.md",
     "Web Security/Server-Side Security/sss.md",
-    "Broken Access Control.md",
-    "Web Security/Client-Side Security/Client-Side Validation.md",
-    "Web Security/Client-Side Security/Clickjacking.md",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
