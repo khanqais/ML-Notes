@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "caa535d19046bf1f",
+        "id": "d52693c4c41b923b",
         "type": "tabs",
         "children": [
           {
-            "id": "a1c09d8bf674a89a",
+            "id": "eca2c40e30494274",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Evaluation Matrics/Binary Classification.md",
+                "file": "System Design/1. SCALE FROM ZERO TO MILLIONS OF USERS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Binary Classification"
+              "title": "1. SCALE FROM ZERO TO MILLIONS OF USERS"
             }
           }
         ]
@@ -165,8 +165,8 @@
         "state": {
           "type": "git-view",
           "state": {},
-          "icon": "lucide-ghost",
-          "title": "git-view"
+          "icon": "git-pull-request",
+          "title": "Source Control"
         }
       }
     ],
@@ -184,53 +184,54 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a1c09d8bf674a89a",
+  "active": "eca2c40e30494274",
   "lastOpenFiles": [
-    "Untitled.base",
-    "College Notes/MIS/Theory of mis.md",
-    "Attachments/Pasted image 20260926121027.png",
-    "Attachments/Pasted image 20260926124750.png",
-    "ML/Evaluation and Selection/Cross-Validation.md",
+    "Attachments/Screenshot_2026-10-22-11-10-14-883.png",
+    "System Design/1. SCALE FROM ZERO TO MILLIONS OF USERS.md",
+    "System Design",
+    "ML/K Nearest Neighbors/K Nearest Neighbors.md",
+    "ML/K Means Clustering/K means.md",
+    "Attachments/Pasted image 20261018161835.png",
+    "Attachments/Pasted image 20261018161655.png",
+    "Attachments/Pasted image 20261018161426.png",
+    "Attachments/Pasted image 20261018161310.png",
+    "Attachments/Pasted image 20261018161155.png",
+    "Attachments/Pasted image 20261018160540.png",
+    "ML/K Means Clustering",
     "ML/Decision Tree and Random Forrest/Random Forrest.md",
-    "College Notes/BlockChain/Theory.md",
-    "College Notes/MIS",
-    "Web Security/Server-Side Security/sss.md",
+    "ML/K Nearest Neighbors/Thoery.md",
+    "ML/Logistic Regression/Logistic Regression.md",
+    "ML/Linear Regression/Linear Regression.md",
+    "ML/Evaluation and Selection/Underfitting and Overfitting.md",
+    "ML/Evaluation and Selection/Cross-Validation.md",
+    "ML/Evaluation and Selection/Bias and Variance.md",
+    "Database/Postgres.md",
+    "Kafka/09-Difference between kafka and rabbitmq.md",
+    "Kafka/08-Consumer.md",
+    "Kafka/07-Producers.md",
+    "Kafka/04-Kafka Topic Concept.md",
+    "Kafka/05-Partitions.md",
+    "Kafka/06-Offset.md",
+    "Kafka/03-Kafka Mental Model.md",
+    "Kafka/02-Queues.md",
+    "Kafka/01-Problem with Rest chain.md",
+    "Web Security/Client-Side Security/CSRF.md",
+    "Web Security/Client-Side Security/Content Security Policy.md",
+    "Web Security/Client-Side Security/Clickjacking.md",
     "Web Security/Server-Side Security/Broken Access Control.md",
     "Web Security/Client-Side Security/XSS.md",
     "Web Security/Client-Side Security/Untitled.canvas",
-    "Web Security/Client-Side Security/Content Security Policy.md",
-    "Web Security/Client-Side Security/Client-Side Validation.md",
-    "Web Security/Client-Side Security/Clickjacking.md",
-    "Web Security/Client-Side Security/CSRF.md",
-    "Web Security/Client-Side Security/CORS.md",
-    "Web Security/API Security/Rate Limiting.md",
-    "Web Security/0-Index/Index.md",
-    "ML/Support Vector Machine/Support vectors.md",
-    "ML/Evaluation and Selection/Underfitting and Overfitting.md",
-    "ML/Evaluation and Selection/True Relationship.md",
-    "ML/Evaluation and Selection/Bias and Variance.md",
-    "Attachments/Pasted image 20261003201919.png",
-    "Attachments/Pasted image 20261003000244.png",
-    "Attachments/Pasted image 20261003000116.png",
-    "Attachments/Pasted image 20261002235916.png",
-    "Attachments/Pasted image 20261002195110.png",
-    "Attachments/Pasted image 20261002194649.png",
-    "Attachments/Pasted image 20261002194316.png",
-    "Attachments/Pasted image 20261002193907.png",
+    "Attachments/Pasted image 20261011123347.png",
+    "Attachments/Pasted image 20261011122911.png",
+    "Attachments/Pasted image 20261011094442.png",
+    "Attachments/Pasted image 20261011091641.png",
+    "Rabbitmq",
+    "Projects",
+    "Kafka",
+    "Database",
+    "Untitled.base",
+    "College Notes/MIS",
     "Web Security/Server-Side Security",
-    "Web Security/Client-Side Security",
-    "Web Security/API Security",
-    "Web Security/0-Index",
-    "ML/Support Vector Machine",
-    "ML/Evaluation and Selection",
-    "College Notes/BlockChain",
-    "Web Security",
-    "ML/K Nearest Neighbors/Thoery.md",
-    "ML/Logistic Regression/Logistic Regression.md",
-    "ML/Seaborn Plot/Histplot.md",
-    "ML/Seaborn Plot/Countplot.md",
-    "ML/Evaluation Matrics/Binary Classification.md",
-    "ML/Bias and Variance/Bias and Variance.md",
-    "ML/Bias and Variance/Theory.md"
+    "Web Security/Client-Side Security"
   ]
 }
