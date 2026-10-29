@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript/PostgreSQL Connection Pools, Concurrency.md",
+                "file": "Javascript/Connection Pools, Concurrency.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PostgreSQL Connection Pools, Concurrency"
+              "title": "Connection Pools, Concurrency"
             }
           }
         ],
@@ -215,7 +215,7 @@
   "active": "466b3c047377c093",
   "lastOpenFiles": [
     "Javascript/JavaScript Event Loop.md",
-    "Javascript/PostgreSQL Connection Pools, Concurrency.md",
+    "Javascript/Connection Pools, Concurrency.md",
     "ML/K Means Clustering/K means.md",
     "Javascript",
     "System Design/1. SCALE FROM ZERO TO MILLIONS OF USERS.md",
