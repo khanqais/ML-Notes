@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Javascript/Streams and Backpressure.md",
+                "file": "Javascript/Webhook.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Streams and Backpressure"
+              "title": "Webhook"
             }
           }
         ],
@@ -214,11 +214,17 @@
   },
   "active": "466b3c047377c093",
   "lastOpenFiles": [
-    "Javascript/Node.js Memory & Memory Leaks.md",
+    "Projects/Tradexa Auction Platform.md",
+    "Javascript/Webhook.md",
+    "Projects/DSA Revision App.md",
+    "ML/NLP/Tokenization.md",
+    "Attachments/Pasted image 20261101084411.png",
+    "ML/NLP",
     "Javascript/Streams and Backpressure.md",
     "Javascript/JavaScript Event Loop.md",
-    "Javascript/Event Emitter.md",
     "Javascript/Connection Pools, Concurrency.md",
+    "Javascript/Node.js Memory & Memory Leaks.md",
+    "Javascript/Event Emitter.md",
     "AWS/18 - Interview Q&A.md",
     "AWS/17 - Advanced VPC.md",
     "AWS/16 - Three-Tier VPC Design.md",
@@ -236,12 +242,8 @@
     "AWS/04 - CIDR Notation.md",
     "AWS/03 - Binary and Subnet Mask.md",
     "AWS/02 - IP Addresses.md",
-    "AWS/01 - Networking Basics.md",
-    "AWS/00 - VPC Index.md",
     "AWS",
-    "ML/K Means Clustering/K means.md",
     "Javascript",
-    "System Design/1. SCALE FROM ZERO TO MILLIONS OF USERS.md",
     "System Design",
     "Attachments/Screenshot_2026-10-22-11-10-14-883.png",
     "Attachments/Pasted image 20261018161835.png",
@@ -255,11 +257,9 @@
     "Rabbitmq",
     "Attachments/Pasted image 20261011123347.png",
     "Attachments/Pasted image 20261011122911.png",
-    "Attachments/Pasted image 20261011094442.png",
     "Daily",
     "Kafka",
     "Projects",
-    "Untitled 1.base",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
