@@ -154,3 +154,193 @@ Example:
 ### 10. Less powerful than modern models
 
 HMMs are still useful because they are fast, simple, and can be trained efficiently by counting probabilities. However, modern sequence models such as CRFs, RNNs, and transformer-based models can use richer context and features, so they generally perform better on complex language tasks.
+
+# Problem 
+
+---
+title: HMM POS Tagging - Justin will spot Will
+tags: [nlp, hmm, pos-tagging, viterbi]
+---
+
+# HMM POS Tagging: *Justin will spot Will*
+
+## Given corpus
+
+| Sentence | POS sequence |
+|---|---|
+| S Martin Justin can watch Will E | S → N → N → M → V → N → E |
+| S Spot will watch Martin E | S → N → M → V → N → E |
+| S Will Justin spot Martin E | S → N → N → V → N → E |
+| S Martin will pat Spot E | S → N → M → V → N → E |
+
+**Tags**
+
+- **N** (Noun): Martin, Justin, Will, Spot
+- **M** (Modal): can, will
+- **V** (Verb): watch, spot, pat
+
+**Tag this sentence:** `Justin will spot Will`
+
+> [!note] Case
+> Words are treated case-insensitively, so `Will` and `will` are the same word type, and `Spot` and `spot` are the same word type.
+
+---
+
+## Step 1: Count transitions
+
+| From → To | Count |
+|---|---:|
+| S → N | 4 |
+| N → N | 2 |
+| N → M | 3 |
+| N → V | 1 |
+| N → E | 4 |
+| M → V | 3 |
+| V → N | 4 |
+| V → M | 0 |
+
+Totals out of each tag:
+
+- From S: $4$
+- From N: $2 + 3 + 1 + 4 = 10$
+- From M: $3$
+- From V: $4$
+
+---
+
+## Step 2: Transition probability matrix
+
+$$
+P(t_i \mid t_{i-1}) = \frac{C(t_{i-1}, t_i)}{C(t_{i-1})}
+$$
+
+| From \ To | N | M | V | E |
+|---|---:|---:|---:|---:|
+| **S** | 1 | 0 | 0 | 0 |
+| **N** | 0.2 | 0.3 | 0.1 | 0.4 |
+| **M** | 0 | 0 | 1 | 0 |
+| **V** | 1 | 0 | 0 | 0 |
+
+---
+
+## Step 3: Count emissions
+
+| Tag | Word | Count |
+|---|---|---:|
+| N | Martin | 4 |
+| N | Justin | 2 |
+| N | Will | 2 |
+| N | Spot | 2 |
+| M | can | 1 |
+| M | will | 2 |
+| V | watch | 2 |
+| V | spot | 1 |
+| V | pat | 1 |
+
+Totals: **N = 10**, **M = 3**, **V = 4**
+
+---
+
+## Step 4: Emission probability matrix
+
+$$
+P(w_i \mid t_i) = \frac{C(t_i, w_i)}{C(t_i)}
+$$
+
+| Tag \ Word | Martin | Justin | Will | Spot | can | will | watch | spot | pat |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **N** | 0.4 | 0.2 | 0.2 | 0.2 | 0 | 0 | 0 | 0 | 0 |
+| **M** | 0 | 0 | 0 | 0 | 1/3 | 2/3 | 0 | 0 | 0 |
+| **V** | 0 | 0 | 0 | 0 | 0 | 0 | 0.5 | 0.25 | 0.25 |
+
+(Merging case: *Will/will* is N with probability 0.2 and M with probability 2/3. *Spot/spot* is N with probability 0.2 and V with probability 0.25.)
+
+---
+
+## Step 5: Possible tag sequences
+
+| Word | Possible tags |
+|---|---|
+| Justin | N |
+| will | M, N |
+| spot | V |
+| Will | N, M |
+
+Candidates:
+
+1. N M V N
+2. N M V M ❌ (since $P(M \mid V) = 0$)
+3. N N V N
+4. N N V M ❌ (since $P(M \mid V) = 0$)
+
+Two valid sequences remain.
+
+---
+
+## Step 6: Score with the HMM
+
+$$
+P(\text{tags}, \text{words}) = P(t_1 \mid S)\,P(w_1 \mid t_1) \prod_{i=2}^{n} P(t_i \mid t_{i-1})\,P(w_i \mid t_i) \cdot P(E \mid t_n)
+$$
+
+### Sequence 1: Justin/N will/M spot/V Will/N
+
+$$
+P = P(N\mid S)\,P(\text{Justin}\mid N)\,P(M\mid N)\,P(\text{will}\mid M)\,P(V\mid M)\,P(\text{spot}\mid V)\,P(N\mid V)\,P(\text{Will}\mid N)\,P(E\mid N)
+$$
+
+$$
+P = 1 \times 0.2 \times 0.3 \times \tfrac{2}{3} \times 1 \times 0.25 \times 1 \times 0.2 \times 0.4 = 0.0008
+$$
+
+### Sequence 2: Justin/N will/N spot/V Will/N
+
+$$
+P = P(N\mid S)\,P(\text{Justin}\mid N)\,P(N\mid N)\,P(\text{will}\mid N)\,P(V\mid N)\,P(\text{spot}\mid V)\,P(N\mid V)\,P(\text{Will}\mid N)\,P(E\mid N)
+$$
+
+$$
+P = 1 \times 0.2 \times 0.2 \times 0.2 \times 0.1 \times 0.25 \times 1 \times 0.2 \times 0.4 = 0.000016
+$$
+
+---
+
+## Step 7: Pick the best sequence
+
+| Tag sequence | Probability |
+|---|---:|
+| **N M V N** | **0.0008** |
+| N N V N | 0.000016 |
+| N M V M | 0 |
+| N N V M | 0 |
+
+$$
+0.0008 > 0.000016
+$$
+
+## Final answer
+
+$$
+\boxed{\text{Justin/N} \;\; \text{will/M} \;\; \text{spot/V} \;\; \text{Will/N}}
+$$
+
+> [!success] Result
+> **Justin/N will/M spot/V Will/N**
+> The HMM prefers *will* as a modal because $P(M \mid N) = 0.3$ and $P(\text{will} \mid M) = \tfrac{2}{3}$ beat the noun reading ($P(N \mid N) = 0.2$, $P(\text{will} \mid N) = 0.2$).
+
+---
+
+## Viterbi view (optional)
+
+```mermaid
+graph LR
+    S((S)) --> J["Justin: N"]
+    J --> WM["will: M"]
+    J --> WN["will: N"]
+    WM --> SP["spot: V"]
+    WN --> SP
+    SP --> W["Will: N"]
+    W --> E((E))
+```
+
+Best path: **S → N → M → V → N → E** (probability 0.0008).
