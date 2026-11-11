@@ -5,7 +5,10 @@ tags:
   - exam-prep
 ---
 
+<<<<<<< HEAD
 # NLP: Morphology, FSA, Preprocessing and WSD
+=======
+>>>>>>> origin/main
 
 > [!abstract] Topics covered
 > - Morphological analysis outputs
@@ -602,6 +605,7 @@ bank = financial institution
 
 ---
 
+<<<<<<< HEAD
 ## 12. Lesk Algorithm
 
 ### Definition
@@ -629,6 +633,54 @@ Score(sense) = overlap between
 ```
 
 ### Algorithm
+=======
+# Lesk Algorithm:
+
+```
+
+
+# Simplified Lesk Algorithm
+
+## What is it?
+
+The **Simplified Lesk Algorithm** is used for **Word Sense Disambiguation (WSD)**.
+
+It finds the correct meaning of an ambiguous word in a sentence by comparing:
+- The words around the target word (context)
+- The dictionary definition of each possible meaning (sense)
+
+The sense with the **highest overlap** with the context is selected.
+
+> Example: `bank` can mean a financial institution or the side of a river.  
+> In “I deposited money in the bank,” it means a financial institution.
+
+## Important Terms
+
+| Symbol | Full form | Meaning | Example |
+|---|---|---|---|
+| `W` | Target word | The ambiguous word whose meaning we want to find | `bank` |
+| `C` | Context | Useful words around the target word after removing stop words | `{deposited, money}` |
+| `S` | Sense | One possible meaning of the target word | Financial institution / river edge |
+| `D` | Definition / gloss | Dictionary definition of a sense | “A financial institution that accepts deposits” |
+| Overlap | Intersection | Number of common words between definition and context | `money` appears in both |
+
+## Formula
+
+```text
+Score(S) = |D ∩ C|
+```
+
+Where:
+
+- `D` = set of useful words in the definition of sense `S`
+- `C` = set of useful context words around word `W`
+- `D ∩ C` = words common to both sets
+- `|D ∩ C|` = count of common words
+
+The algorithm chooses the sense `S` with the maximum score.
+
+## Algorithm
+>>>>>>> origin/main
 
 ```text
 1. Input:
@@ -648,6 +700,7 @@ Score(sense) = overlap between
 5. Output the selected sense.
 ```
 
+<<<<<<< HEAD
 ### Example
 
 ```text
@@ -692,3 +745,80 @@ WSD → finds correct meaning using context
 Dictionary-based WSD → compares sense definitions with context
 Lesk algorithm → selects sense with maximum definition-context overlap
 ```
+=======
+## Worked Example
+
+### Input
+
+```text
+Sentence: I deposited money in the bank.
+Target word W: bank
+```
+
+### Step 1: Tokenize sentence
+
+```text
+["I", "deposited", "money", "in", "the", "bank"]
+```
+
+### Step 2: Remove stop words
+
+Stop words:
+
+```text
+["I", "in", "the"]
+```
+
+Context set:
+
+```text
+C = {deposited, money}
+```
+
+### Step 3: Possible senses of bank
+
+| Sense | Meaning | Definition |
+|---|---|---|
+| `S1` | Financial institution | “A financial institution that accepts deposits and keeps money” |
+| `S2` | River edge | “The sloping side of a river or lake” |
+
+### Step 4: Compute overlap
+
+#### Sense 1: Financial institution
+
+```text
+D1 = {financial, institution, accepts, deposits, money}
+C  = {deposited, money}
+
+D1 ∩ C = {money}
+
+Score(S1) = 1
+```
+
+#### Sense 2: River edge
+
+```text
+D2 = {sloping, side, river, lake}
+C  = {deposited, money}
+
+D2 ∩ C = {}
+
+Score(S2) = 0
+```
+### Step 5: Select best sense
+
+```text
+Score(S1) = 1
+Score(S2) = 0
+```
+
+Since:
+```text
+Score(S1) > Score(S2)
+```
+
+Output:
+```text
+bank = financial institution
+```
+>>>>>>> origin/main
