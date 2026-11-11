@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Docker/Offline.md",
-                "mode": "source",
+                "file": "ML/Evaluation and Selection/Cross-Validation.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Offline"
+              "title": "Cross-Validation"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 329.23207092285156
   },
   "right": {
     "id": "7d2c3ace1addb501",
@@ -199,31 +199,35 @@
   },
   "active": "a58e5979b565b304",
   "lastOpenFiles": [
-    "Docker/Volume.md",
-    "Docker/Offline.md",
-    "Docker/Images.md",
+    "College Notes/ML/Untitled.md",
+    "College Notes/ML/How to combine classifier.md",
+    "ML/Decision Tree and Random Forrest/Random Forrest.md",
+    "Attachments/Pasted image 20261111230339.png",
+    "Attachments/Pasted image 20261111230248.png",
+    "Attachments/Pasted image 20261111230108.png",
+    "Attachments/Pasted image 20261111230045.png",
+    "Attachments/Pasted image 20261111225954.png",
+    "Attachments/Pasted image 20261111225938.png",
+    "Attachments/Pasted image 20261111225844.png",
+    "Attachments/Pasted image 20261111225810.png",
+    "College Notes/ML/Regression line, Scatter plot, Error in prediction and Best fitting line.md",
+    "College Notes/ML/Linear regression.md",
     "Docker/Containers.md",
-    "Attachments/Pasted image 20261111164010.png",
-    "Attachments/Pasted image 20261111164002.png",
+    "Docker/Images.md",
+    "Docker/Offline.md",
+    "Docker/Volume.md",
     "College Notes/MIS/Data Governance and how to secure ti.md",
     "Docker",
+    "Attachments/Pasted image 20261111164010.png",
+    "Attachments/Pasted image 20261111164002.png",
     "College Notes/NLP/HMM tagging.md",
     "College Notes/MIS",
-    "Attachments/Pasted image 20261109200035.png",
-    "Attachments/Pasted image 20261109200023.png",
-    "Attachments/Pasted image 20261109200010.png",
-    "Attachments/Pasted image 20261109195958.png",
-    "Attachments/Pasted image 20261109195942.png",
-    "Attachments/Pasted image 20261109195930.png",
-    "Attachments/Pasted image 20261109195906.png",
-    "Attachments/Pasted image 20261109195813.png",
     "College Notes/NLP/Word Sense Disambiguation - Supervised Learning.md",
     "College Notes/NLP/POS tagging.md",
     "College Notes/NLP/Hobbs and centering algorithms.md",
     "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
     "College Notes/BDA/Module 1.md",
     "College Notes/NLP",
-    "College Notes/ML/Linear regression.md",
     "College Notes/ML",
     "College Notes/BDA/Module 6.md",
     "College Notes/BlockChain/Theory.md",
@@ -237,10 +241,6 @@
     "Javascript/Streams and Backpressure.md",
     "Javascript/JavaScript Event Loop.md",
     "Javascript/Connection Pools, Concurrency.md",
-    "Javascript/Node.js Memory & Memory Leaks.md",
-    "Javascript/Event Emitter.md",
-    "AWS/18 - Interview Q&A.md",
-    "AWS/17 - Advanced VPC.md",
     "AWS",
     "Javascript",
     "System Design",
