@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "College Notes/BDA/Module 6.md",
+                "file": "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Module 6"
+              "title": "Morphology, FSA, Preprocessing and WSD"
             }
           }
         ],
@@ -198,8 +198,8 @@
             "state": {
               "type": "git-history-view",
               "state": {},
-              "icon": "history",
-              "title": "History"
+              "icon": "lucide-ghost",
+              "title": "git-history-view"
             }
           }
         ],
@@ -224,8 +224,10 @@
   },
   "active": "d3929674933a84d3",
   "lastOpenFiles": [
-    "College Notes/ML/Linear regression.md",
     "College Notes/BDA/Module 6.md",
+    "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
+    "College Notes/NLP",
+    "College Notes/ML/Linear regression.md",
     "College Notes/BDA/Module 1.md",
     "College Notes/ML",
     "conflict-files-obsidian-git.md",
@@ -265,10 +267,8 @@
     "AWS/14 - Security Groups vs NACLs.md",
     "AWS/12 - Route Tables and Internet Gateway.md",
     "AWS/13 - NAT Gateway.md",
-    "AWS/11 - AWS Subnets.md",
     "AWS",
     "Database",
-    "Rabbitmq",
     "Attachments/Pasted image 20261011123347.png",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
