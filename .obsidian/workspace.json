@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "College Notes/MIS/Data Governance and how to secure ti.md",
+                "file": "Docker/Offline.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Data Governance and how to secure ti"
+              "title": "Offline"
             }
           }
         ]
@@ -199,8 +199,15 @@
   },
   "active": "a58e5979b565b304",
   "lastOpenFiles": [
-    "College Notes/NLP/HMM tagging.md",
+    "Docker/Volume.md",
+    "Docker/Offline.md",
+    "Docker/Images.md",
+    "Docker/Containers.md",
+    "Attachments/Pasted image 20261111164010.png",
+    "Attachments/Pasted image 20261111164002.png",
     "College Notes/MIS/Data Governance and how to secure ti.md",
+    "Docker",
+    "College Notes/NLP/HMM tagging.md",
     "College Notes/MIS",
     "Attachments/Pasted image 20261109200035.png",
     "Attachments/Pasted image 20261109200023.png",
@@ -210,8 +217,6 @@
     "Attachments/Pasted image 20261109195930.png",
     "Attachments/Pasted image 20261109195906.png",
     "Attachments/Pasted image 20261109195813.png",
-    "Attachments/Pasted image 20261109195620.png",
-    "Attachments/Pasted image 20261109195535.png",
     "College Notes/NLP/Word Sense Disambiguation - Supervised Learning.md",
     "College Notes/NLP/POS tagging.md",
     "College Notes/NLP/Hobbs and centering algorithms.md",
@@ -236,15 +241,10 @@
     "Javascript/Event Emitter.md",
     "AWS/18 - Interview Q&A.md",
     "AWS/17 - Advanced VPC.md",
-    "AWS/16 - Three-Tier VPC Design.md",
-    "AWS/15 - Default VPC.md",
-    "AWS/14 - Security Groups vs NACLs.md",
-    "AWS/13 - NAT Gateway.md",
     "AWS",
     "Javascript",
     "System Design",
     "ML/K Means Clustering",
-    "Database",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
