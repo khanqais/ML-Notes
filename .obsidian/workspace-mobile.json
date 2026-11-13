@@ -11,14 +11,13 @@
             "id": "fb7e08a93750e9ac",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "College Notes/NLP/Module 1/NLP process.md",
-                "mode": "source",
-                "source": false
+                "file": "Untitled.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "NLP process"
+              "icon": "lucide-table",
+              "title": "Untitled"
             }
           }
         ]
@@ -186,17 +185,21 @@
   },
   "active": "fb7e08a93750e9ac",
   "lastOpenFiles": [
-    "College Notes/NLP/Module 1/Untitled.md",
+    "College Notes/NLP/Ngram.md",
+    "Untitled.base",
+    "College Notes/NLP/Porter stamming.md",
+    "College Notes/NLP/Hobbs and centering algorithms.md",
+    "College Notes/NLP/Porter stamming",
+    "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
+    "College Notes/NLP/Word Sense Disambiguation - Supervised Learning.md",
     "College Notes/NLP/Module 1/NLP process.md",
+    "College Notes/NLP/Module 1/Untitled.md",
     "AWS/01 - Networking Basics.md",
     "College Notes/NLP/Module 1",
     "College Notes/ML/Untitled.md",
     "College Notes/BDA/Module 3/Untitled.md",
     "ML/NLP/Tokenization.md",
-    "College Notes/NLP/Word Sense Disambiguation - Supervised Learning.md",
     "College Notes/NLP/POS tagging.md",
-    "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
-    "College Notes/NLP/Hobbs and centering algorithms.md",
     "College Notes/NLP/HMM tagging.md",
     "College Notes/ML/Regression line, Scatter plot, Error in prediction and Best fitting line.md",
     "College Notes/ML/Linear regression.md",
@@ -210,8 +213,6 @@
     "Javascript/Event Emitter.md",
     "Docker/Volume.md",
     "Docker/Offline.md",
-    "Docker/Images.md",
-    "Docker/Containers.md",
     "Attachments/Screenshot 2026-11-08 171708.png",
     "Attachments/Pasted image 20261111230339.png",
     "Attachments/Pasted image 20261111230248.png",
@@ -228,10 +229,7 @@
     "College Notes/ML",
     "College Notes/BDA",
     "Docker",
-    "Javascript/Connection Pools, Concurrency.md",
     "Javascript",
-    "AWS",
-    "System Design",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
