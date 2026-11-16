@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML/Evaluation and Selection/Cross-Validation.md",
-                "mode": "preview",
+                "file": "ML/Evaluation Matrics/Binary Classification.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cross-Validation"
+              "title": "Binary Classification"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.23207092285156
+    "width": 291.2566680908203
   },
   "right": {
     "id": "7d2c3ace1addb501",
@@ -199,7 +199,21 @@
   },
   "active": "a58e5979b565b304",
   "lastOpenFiles": [
+    "College Notes/ML/Regression line, Scatter plot, Error in prediction and Best fitting line.md",
+    "ML/Logistic Regression/Logistic Regression.md",
     "College Notes/ML/Untitled.md",
+    "Untitled.base",
+    "College Notes/NLP/Porter stamming.md",
+    "College Notes/NLP/Ngram.md",
+    "College Notes/NLP/Module 1/Untitled.md",
+    "College Notes/NLP/Module 1/NLP process.md",
+    "College Notes/NLP/Module 1",
+    "ML/Linear Regression/Linear Regression.md",
+    "College Notes/ML/Linear regression.md",
+    "College Notes/BDA/Module 1.md",
+    "College Notes/BDA/Module 3/Untitled.md",
+    "College Notes/BDA/Module 6.md",
+    "ML/Evaluation and Selection/Cross-Validation.md",
     "College Notes/ML/How to combine classifier.md",
     "ML/Decision Tree and Random Forrest/Random Forrest.md",
     "Attachments/Pasted image 20261111230339.png",
@@ -210,8 +224,6 @@
     "Attachments/Pasted image 20261111225938.png",
     "Attachments/Pasted image 20261111225844.png",
     "Attachments/Pasted image 20261111225810.png",
-    "College Notes/ML/Regression line, Scatter plot, Error in prediction and Best fitting line.md",
-    "College Notes/ML/Linear regression.md",
     "Docker/Containers.md",
     "Docker/Images.md",
     "Docker/Offline.md",
@@ -226,25 +238,13 @@
     "College Notes/NLP/POS tagging.md",
     "College Notes/NLP/Hobbs and centering algorithms.md",
     "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
-    "College Notes/BDA/Module 1.md",
     "College Notes/NLP",
     "College Notes/ML",
-    "College Notes/BDA/Module 6.md",
     "College Notes/BlockChain/Theory.md",
     "College Notes/BDA",
-    "Projects/Tradexa Auction Platform.md",
-    "Web Security/0-Index/Index.md",
-    "Javascript/Webhook.md",
-    "Projects/DSA Revision App.md",
-    "ML/NLP/Tokenization.md",
     "ML/NLP",
-    "Javascript/Streams and Backpressure.md",
-    "Javascript/JavaScript Event Loop.md",
-    "Javascript/Connection Pools, Concurrency.md",
     "AWS",
     "Javascript",
-    "System Design",
-    "ML/K Means Clustering",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
