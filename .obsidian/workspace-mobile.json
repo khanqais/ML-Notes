@@ -11,13 +11,14 @@
             "id": "fb7e08a93750e9ac",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.base",
-                "viewName": "Table"
+                "file": "College Notes/ML/Clustering using graph methods.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "Clustering using graph methods"
             }
           }
         ]
@@ -185,9 +186,18 @@
   },
   "active": "fb7e08a93750e9ac",
   "lastOpenFiles": [
+    "ML/Decision Tree and Random Forrest/Random Forrest.md",
+    "College Notes/MIS/Knowledge management.md",
+    "College Notes/MIS/Cybersecurity.md",
+    "College Notes/MIS/How to store data in organisation and manage data.md",
+    "College Notes/MIS/Untitled",
+    "College Notes/MIS/Information security and control security.md",
+    "College Notes/ML/Clustering using graph methods.md",
+    "ML/DBscan.md",
+    "College Notes/ML/Module 1.md",
+    "College Notes/NLP/Porter stamming.md",
     "College Notes/NLP/Ngram.md",
     "Untitled.base",
-    "College Notes/NLP/Porter stamming.md",
     "College Notes/NLP/Hobbs and centering algorithms.md",
     "College Notes/NLP/Porter stamming",
     "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
@@ -206,13 +216,6 @@
     "College Notes/ML/How to combine classifier.md",
     "College Notes/MIS/Data Governance and how to secure ti.md",
     "College Notes/BDA/Module 6.md",
-    "College Notes/BDA/Module 1.md",
-    "Javascript/Webhook.md",
-    "Javascript/Streams and Backpressure.md",
-    "Javascript/Node.js Memory & Memory Leaks.md",
-    "Javascript/Event Emitter.md",
-    "Docker/Volume.md",
-    "Docker/Offline.md",
     "Attachments/Screenshot 2026-11-08 171708.png",
     "Attachments/Pasted image 20261111230339.png",
     "Attachments/Pasted image 20261111230248.png",
@@ -229,7 +232,6 @@
     "College Notes/ML",
     "College Notes/BDA",
     "Docker",
-    "Javascript",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
