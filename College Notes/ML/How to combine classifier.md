@@ -43,22 +43,25 @@ Final prediction: **Spam**, because its average probability is higher. Soft voti
 
 Some classifiers can be given more importance than others:
 
-```
-\hat{y} = \arg\max_c \sum_i w_i P_i(y=c \mid x)
-```
+$$
+\hat{y} = \arg\max_c \sum_i w_i \, P_i(y=c \mid x)
+$$
 
-For example, if a random forest is more reliable than a KNN model, it can receive a higher weight. This is useful when validation performance differs across models.[[scikit-learn](https://scikit-learn.org/1.9/modules/ensemble.html)][[geeksforgeeks](https://www.geeksforgeeks.org/machine-learning/voting-in-machine-learning/)]
+where:
+- $w_i$ is the weight of classifier $i$
+- $P_i(y=c \mid x)$ is the probability classifier $i$ assigns to class $c$ given input $x$
 
+For example, if a random forest is more reliable than a KNN model, it can receive a higher weight. This is useful when validation performance differs across models.
 ## Bagging
 
-**Bagging** means **Bootstrap Aggregating**. Multiple models of the same type are trained in parallel on different random subsets of the training data, and their predictions are combined through majority voting or probability averaging.[[scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html)][[geeksforgeeks](https://www.geeksforgeeks.org/machine-learning/a-comprehensive-guide-to-ensemble-learning/)]
+**Bagging** means **Bootstrap Aggregating**. Multiple models of the same type are trained in parallel on different random subsets of the training data, and their predictions are combined through majority voting or probability averaging.
 
 ### How it works
 
 1. Create multiple bootstrap samples from the training dataset by sampling **with replacement**.
 2. Train one classifier on each sample.
 3. For classification, take a majority vote; for regression, average the predictions.
-4. Use the combined result as the final prediction.[[scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.BaggingClassifier.html)][[fall-2023-python-programming-for-data-science.readthedocs](https://fall-2023-python-programming-for-data-science.readthedocs.io/en/latest/Lectures/Theme_3-Model_Engineering/Lecture_14-Ensemble_Methods/Lecture_14-Ensemble_Methods.html)]
+4. Use the combined result as the final prediction.
 
 Example: train 100 decision trees on 100 different random samples of the data. If 70 trees predict “Fraud” and 30 predict “Not Fraud,” the final prediction is **Fraud**.
 
