@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "College Notes/Untitled.md",
+                "file": "College Notes/Data Stream Management System.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Data Stream Management System"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "fb7e08a93750e9ac",
   "lastOpenFiles": [
+    "Attachments/Screenshot_2026-11-17-23-03-53-050.png",
     "College Notes/Collaborative filtering and content based.md",
-    "College Notes/Untitled.md",
+    "College Notes/Data Stream Management System.md",
     "College Notes/BDA/Module 3/Untitled.md",
     "College Notes/BDA/Module 1.md",
     "College Notes/BDA/Module 6.md",
@@ -224,7 +225,6 @@
     "College Notes/NLP/Porter stamming",
     "College Notes/NLP/Morphology, FSA, Preprocessing and WSD.md",
     "College Notes/NLP/Word Sense Disambiguation - Supervised Learning.md",
-    "College Notes/NLP/Module 1/NLP process.md",
     "College Notes/NLP/Module 1",
     "College Notes/BDA/Module 3",
     "ML/NLP",
