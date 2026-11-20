@@ -1,9 +1,8 @@
+## Topics covered
 
-
-> [!abstract] Topics covered
-> - Supervised learning approach for WSD
-> - Naive Bayes algorithm for WSD
-> - Yarowsky bootstrapping approach
+- Supervised learning approach for WSD
+- Naive Bayes algorithm for WSD
+- Yarowsky bootstrapping approach
 
 ---
 
@@ -11,100 +10,88 @@
 
 ### Definition
 
-In the **supervised learning approach** to Word Sense Disambiguation (WSD), a machine-learning model is trained using a **sense-annotated corpus**. Each occurrence of an ambiguous word is manually labelled with its correct sense.
+In the supervised learning approach to **Word Sense Disambiguation (WSD)**, a machine-learning model is trained using a **sense-annotated corpus**. Each occurrence of an ambiguous word is manually labelled with its correct sense.
 
 The trained model then predicts the correct sense of the word in a new sentence using its surrounding context.
 
 ### Example
 
-```text
-Sentence: "I deposited money in the bank."
-Target word: bank
-Correct sense: financial institution
+**Sentence:** "I deposited money in the bank."
+- Target word: `bank`
+- Correct sense: financial institution
 
-Sentence: "We sat near the bank of the river."
-Target word: bank
-Correct sense: river side
-```
+**Sentence:** "We sat near the bank of the river."
+- Target word: `bank`
+- Correct sense: river side
 
 ### WSD as classification
 
-Supervised WSD treats sense disambiguation as a classification problem.
+Supervised WSD treats sense disambiguation as a **classification problem**.
 
 ```text
-Input:  target word + context
+Input:   target word + context
 Classes: possible senses of the target word
-Output: most likely sense
+Output:  most likely sense
 ```
 
 For the word `bank`:
 
-```text
-Class 1: financial institution
-Class 2: river side
-```
+- Class 1: financial institution
+- Class 2: river side
 
 ### Training data
 
-Supervised WSD requires **sense-tagged text**. Every occurrence of the target word is labelled with its correct sense.
+Supervised WSD requires sense-tagged text. Every occurrence of the target word is labelled with its correct sense.
 
 | Sentence | Target word | Sense label |
 |---|---|---|
-| “I deposited money in the bank.” | bank | financial institution |
-| “The bank approved my loan.” | bank | financial institution |
-| “We sat on the bank of the river.” | bank | river side |
-| “The river bank was muddy.” | bank | river side |
+| "I deposited money in the bank." | bank | financial institution |
+| "The bank approved my loan." | bank | financial institution |
+| "We sat on the bank of the river." | bank | river side |
+| "The river bank was muddy." | bank | river side |
 
 ### Feature extraction
 
-Each training example is converted into a feature vector. The classifier learns the relationship between features and the correct sense.
+Each training example is converted into a **feature vector**. The classifier learns the relationship between features and the correct sense.
 
 | Feature | Explanation | Example |
 |---|---|---|
-| Surrounding words | Words near the target word | `money`, `deposit`, `loan` |
-| POS tag | Grammatical category of the target word | `bank` is a noun |
-| Collocations | Frequently occurring word combinations | `river bank`, `savings bank` |
-| Co-occurrence words | Words that often appear with a sense | `deposit`, `account`, `money` |
-| Position features | Words at fixed positions around target word | Previous word, next word |
+| Surrounding words | Words near the target word | money, deposit, loan |
+| POS tag | Grammatical category of the target word | bank is a noun |
+| Collocations | Frequently occurring word combinations | river bank, savings bank |
+| Co-occurrence words | Words that often appear with a sense | deposit, account, money |
+| Position features | Words at fixed positions around the target word | previous word, next word |
 | Topic/domain features | General topic of the sentence | finance, river, nature |
-| Word embeddings | Dense numerical vectors for words | Vector for `money`, `loan`, `deposit` |
+| Word embeddings | Dense numerical vectors for words | vector for money, loan, deposit |
 
 ### Training phase
 
-```text
 1. Collect sentences containing the target word.
 2. Manually label each occurrence with its correct sense.
 3. Tokenize and preprocess the text.
 4. Extract features such as surrounding words, POS tags, collocations, and embeddings.
 5. Convert each example into a feature vector.
-6. Train a classifier using feature vectors and sense labels.
-```
+6. Train a classifier using the feature vectors and sense labels.
 
 ### Testing phase
 
-```text
 1. Take a new sentence containing the ambiguous word.
 2. Extract the same features used during training.
 3. Convert the sentence into a feature vector.
 4. Give the vector to the trained classifier.
 5. The classifier predicts the most probable sense.
-```
 
-### Example
+**Example**
 
-```text
-New sentence:
-"He opened an account at the bank."
+New sentence: "He opened an account at the bank."
 
-Predicted sense:
-bank = financial institution
-```
+Predicted sense: `bank` = financial institution
 
 ### Common classifiers
 
 | Algorithm | Working principle |
 |---|---|
-| Naive Bayes | Calculates probability of each sense using context features |
+| Naive Bayes | Calculates the probability of each sense using context features |
 | Decision tree | Uses feature-based rules |
 | Decision list | Applies ordered if-then rules |
 | Support Vector Machine | Separates examples of different senses |
@@ -125,7 +112,8 @@ bank = financial institution
 - A separate classifier may be needed for each target word
 - Poor performance for rare words or unseen senses
 
-> [!tip] Interview-ready answer
+### Interview-ready answer
+
 > In supervised WSD, we treat sense disambiguation as a classification problem. A sense-annotated corpus is used to train a classifier, where each occurrence of an ambiguous word is labelled with its correct sense. Features such as surrounding words, POS tags, collocations, co-occurring words, and word embeddings are extracted and converted into feature vectors. During training, the classifier learns the relationship between these features and the correct sense. During testing, it predicts the most likely sense for a new occurrence.
 
 ---
@@ -134,519 +122,467 @@ bank = financial institution
 
 ### Definition
 
-The **Naive Bayes supervised algorithm** is a probabilistic classification method used for WSD. It learns from sense-tagged examples and predicts the most probable sense of an ambiguous word using its context.
+The **Naive Bayes** supervised algorithm is a probabilistic classification method used for WSD. It learns from sense-tagged examples and predicts the most probable sense of an ambiguous word using its context.
 
 It is called:
 
-- **Naive** because it assumes all context features are independent given the sense
-- **Bayes** because it uses Bayes’ theorem
+- **Naive** because it assumes all context features are independent of each other, given the sense
+- **Bayes** because it uses Bayes' theorem
 
 ### Basic idea
 
-For an ambiguous word \(w\), the algorithm has:
+For an ambiguous word $w$, the algorithm has:
 
-```text
-Target word: bank
-Possible senses: financial institution, river side
-Features: context words, POS tags, collocations
-Output: most likely sense
-```
+- **Target word:** `bank`
+- **Possible senses:** financial institution, river side
+- **Features:** context words, POS tags, collocations
+- **Output:** most likely sense
 
 The classifier calculates:
 
-\[
+$$
 P(\text{sense} \mid \text{features})
-\]
+$$
 
-and selects the sense with the maximum probability.
+and selects the sense with the **maximum** probability.
 
-### Bayes theorem
+### Bayes' theorem
 
-\[
-P(S \mid F) = \frac{P(F \mid S)P(S)}{P(F)}
-\]
+$$
+P(S \mid F) = \frac{P(F \mid S) \, P(S)}{P(F)}
+$$
 
 Where:
 
-- \(S\) = possible sense of the target word
-- \(F\) = observed context features
-- \(P(S)\) = prior probability of the sense
-- \(P(F \mid S)\) = likelihood of features given the sense
-- \(P(F)\) = probability of the features
+- $S$ is a possible sense of the target word
+- $F$ is the set of observed context features
+- $P(S)$ is the **prior probability** of the sense (how common the sense is overall)
+- $P(F \mid S)$ is the **likelihood** of the features given the sense
+- $P(F)$ is the probability of the features
+- $P(S \mid F)$ is the **posterior probability** of the sense given the features (what we want)
 
-Since \(P(F)\) is the same for all senses, the algorithm compares:
+Since $P(F)$ is the same for every sense, it does not affect which sense wins. So the algorithm only compares:
 
-\[
-P(S \mid F) \propto P(F \mid S)P(S)
-\]
+$$
+P(S \mid F) \propto P(F \mid S) \, P(S)
+$$
+
+where $\propto$ means "is proportional to".
 
 ### Naive independence assumption
 
-The algorithm assumes that context features are conditionally independent given the sense:
+The algorithm assumes that context features are **conditionally independent** given the sense:
 
-\[
-P(f_1, f_2, ..., f_n \mid S) =
-P(f_1 \mid S)P(f_2 \mid S)...P(f_n \mid S)
-\]
+$$
+P(f_1, f_2, \ldots, f_n \mid S) = P(f_1 \mid S) \, P(f_2 \mid S) \cdots P(f_n \mid S)
+$$
 
-For example, for the word `bank`:
+This can be written compactly as:
 
-```text
-Features: deposit, money, loan
-Sense: financial institution
-```
+$$
+P(f_1, \ldots, f_n \mid S) = \prod_{j=1}^{n} P(f_j \mid S)
+$$
+
+**Example** for the word `bank`:
+
+- Features: `deposit`, `money`, `loan`
+- Sense: financial institution
 
 Naive Bayes assumes:
 
-```text
-P(deposit, money, loan | financial institution)
-= P(deposit | financial institution)
-× P(money | financial institution)
-× P(loan | financial institution)
-```
+$$
+P(\text{deposit}, \text{money}, \text{loan} \mid \text{financial institution}) = P(\text{deposit} \mid \text{financial institution}) \times P(\text{money} \mid \text{financial institution}) \times P(\text{loan} \mid \text{financial institution})
+$$
+
+The assumption is not strictly true (`money` and `loan` often appear together), but it makes the model simple and it works well in practice.
+
+### Decision rule
+
+Combining Bayes' theorem with the independence assumption, the predicted sense $\hat{S}$ is:
+
+$$
+\hat{S} = \underset{S}{\arg\max} \; P(S) \prod_{j=1}^{n} P(f_j \mid S)
+$$
+
+$\arg\max$ means "choose the sense $S$ that gives the largest value".
 
 ### Training phase
 
-The training data contains sentences where the ambiguous word is already labelled with its correct sense.
+The training data contains sentences where the ambiguous word is already labelled with its correct sense. From this data, the algorithm estimates two kinds of probabilities by counting.
 
-| Sentence | Sense label |
-|---|---|
-| “I deposited money in the bank.” | financial institution |
-| “The bank approved my loan.” | financial institution |
-| “We sat on the bank of the river.” | river side |
-| “The river bank was muddy.” | river side |
+**1. Prior probability of each sense**
 
-#### Steps
+$$
+P(S) = \frac{C(S)}{C(\text{all examples})}
+$$
 
-```text
-1. Collect sense-tagged sentences.
-2. Identify the target word in each sentence.
-3. Extract context features around the target word.
-4. Remove stop words if required.
-5. Count how often each feature occurs with each sense.
-6. Calculate prior probabilities P(S).
-7. Calculate conditional probabilities P(feature | sense).
-8. Store these probabilities for testing.
-```
+where $C(S)$ is the number of training examples labelled with sense $S$.
 
-### Prior probability
+**2. Likelihood of each feature given a sense**
 
-\[
-P(S) = \frac{\text{number of examples with sense } S}
-{\text{total number of training examples}}
-\]
+$$
+P(f_j \mid S) = \frac{C(f_j, S)}{C(S)}
+$$
 
-Example:
+where $C(f_j, S)$ is the number of times feature $f_j$ appears in examples labelled with sense $S$.
 
-```text
-60 examples: financial institution
-40 examples: river side
-```
+**Smoothing:** if a feature never appears with a sense, $P(f_j \mid S) = 0$ and the whole product becomes zero. To avoid this, use Laplace (add-one) smoothing:
 
-\[
-P(\text{financial institution}) = \frac{60}{100} = 0.6
-\]
+$$
+P(f_j \mid S) = \frac{C(f_j, S) + 1}{C(S) + V}
+$$
 
-\[
-P(\text{river side}) = \frac{40}{100} = 0.4
-\]
-
-### Conditional probability
-
-\[
-P(f \mid S) =
-\frac{\text{number of times feature } f \text{ occurs with sense } S}
-{\text{total number of features in sense } S}
-\]
-
-Example:
-
-```text
-P(money | financial institution) = 0.30
-P(money | river side) = 0.01
-```
-
-This means `money` is much more likely to occur with the financial-institution sense of `bank`.
+where $V$ is the number of distinct features (vocabulary size).
 
 ### Testing phase
 
-```text
-1. Take the new sentence containing the ambiguous word.
-2. Extract context features.
-3. For each possible sense:
-       Calculate P(S)
-       Calculate P(feature | S) for every feature
-       Multiply all feature probabilities
-       Multiply by P(S)
-4. Select the sense with the highest score.
-```
+1. Take a new sentence containing the ambiguous word.
+2. Extract its context features $f_1, \ldots, f_n$.
+3. For each sense $S$, compute $P(S) \prod_j P(f_j \mid S)$.
+4. Choose the sense with the highest score.
 
-### Formula
+### Worked example
 
-For features \(f_1, f_2, ..., f_n\):
+Suppose the training data for `bank` gives these probabilities:
 
-\[
-Score(S) =
-P(S) \times P(f_1 \mid S) \times P(f_2 \mid S) \times ... \times P(f_n \mid S)
-\]
-
-### Example: bank
-
-Test sentence:
-
-```text
-"He deposited money in the bank."
-```
-
-Target word:
-
-```text
-bank
-```
-
-Context features after stop-word removal:
-
-```text
-deposited, money
-```
-
-Possible senses:
-
-```text
-Sense 1: financial institution
-Sense 2: river side
-```
-
-| Feature | P(feature | financial institution) | P(feature | river side) |
+| Quantity | financial institution | river side |
 |---|---:|---:|
-| deposited | 0.30 | 0.02 |
-| money | 0.40 | 0.01 |
+| $P(S)$ | 0.6 | 0.4 |
+| $P(\text{deposit} \mid S)$ | 0.4 | 0.05 |
+| $P(\text{money} \mid S)$ | 0.5 | 0.1 |
 
-Prior probabilities:
+New sentence: "I want to **deposit** **money** in the bank."
 
-```text
-P(financial institution) = 0.6
-P(river side) = 0.4
-```
+Features: `deposit`, `money`.
 
-Calculate scores:
+Score for **financial institution**:
 
-\[
-Score(\text{financial institution})
-= 0.6 \times 0.30 \times 0.40
-= 0.072
-\]
+$$
+0.6 \times 0.4 \times 0.5 = 0.12
+$$
 
-\[
-Score(\text{river side})
-= 0.4 \times 0.02 \times 0.01
-= 0.00008
-\]
+Score for **river side**:
 
-Since:
+$$
+0.4 \times 0.05 \times 0.1 = 0.002
+$$
 
-```text
-0.072 > 0.00008
-```
-
-The predicted sense is:
-
-```text
-bank = financial institution
-```
-
-### Zero probability problem
-
-If a feature never appeared with a sense during training:
-
-\[
-P(f \mid S) = 0
-\]
-
-Multiplying by zero makes the whole score zero.
-
-To avoid this, use **Laplace smoothing**:
-
-\[
-P(f \mid S) =
-\frac{\text{count}(f, S) + 1}
-{\text{total features in sense } S + V}
-\]
-
-Where \(V\) is the vocabulary size.
-
-### Features used
-
-| Feature | Example |
-|---|---|
-| Previous word | Word before the target word |
-| Next word | Word after the target word |
-| Bag of words | All words in a context window |
-| Collocations | Fixed word combinations such as `river bank` |
-| POS tags | Noun, verb, adjective |
-| Co-occurrence words | `money`, `deposit`, `loan` |
-| Word embeddings | Dense numerical vectors |
+Since $0.12 > 0.002$, the predicted sense is **financial institution**.
 
 ### Advantages
 
-- Simple and easy to implement
-- Fast training and prediction
-- Works well with limited training data
-- Handles many features efficiently
-- Provides probabilistic output
+- Simple and fast to train
+- Works well with small to medium amounts of labelled data
+- Handles many features easily
+- Gives probabilities, not just a label
 
 ### Limitations
 
-- Independence assumption is unrealistic
-- Context words are often related
-- May perform poorly with small or biased training data
-- Rare senses may not be predicted well
+- The independence assumption is unrealistic
+- Needs sense-annotated training data
+- Needs smoothing for unseen features
+- A separate model is usually needed for each target word
 
-> [!tip] Interview-ready answer
-> Naive Bayes is a supervised probabilistic algorithm for WSD. It treats each possible sense of an ambiguous word as a class and uses context features such as surrounding words, POS tags, and collocations. During training, it calculates the prior probability of each sense and the conditional probability of each feature given that sense. During testing, it applies Bayes’ theorem and selects the sense with the highest posterior probability. It assumes that context features are independent given the sense, which is why it is called “naive.”
-
----
-
-## 3. Yarowsky Bootstrapping Approach
+## 3. Lesk Algorithm for WSD
 
 ### Definition
 
-The **Yarowsky bootstrapping approach** is a **semi-supervised learning** method used mainly for Word Sense Disambiguation (WSD). It starts with a small set of manually labelled seed examples and gradually labels a large amount of unlabelled text using the model’s own high-confidence predictions.
+The **Lesk algorithm** (Michael Lesk, 1986) is a **dictionary-based (knowledge-based)** approach to Word Sense Disambiguation. It does **not** need a sense-tagged corpus. Instead, it uses the **definitions (glosses)** in a dictionary such as WordNet.
 
-It is called **bootstrapping** because the system starts small and repeatedly improves itself by adding newly labelled examples to the training set.
+**Core idea:** the correct sense of an ambiguous word is the one whose dictionary definition shares the **most words** with the surrounding context.
 
-### Why it is semi-supervised
+> Words that appear together in a sentence tend to talk about the same topic, so the right sense should have a definition that uses related words.
 
-It uses:
+### Key terms
 
-```text
-Small labelled seed data
-+
-Large unlabelled corpus
-```
-
-This reduces the need for expensive manual sense annotation.
-
-```text
-Small labelled seed data
-        ↓
-Initial classifier
-        ↓
-Label high-confidence unlabelled examples
-        ↓
-Add them to training data
-        ↓
-Retrain classifier
-        ↓
-Repeat until convergence
-```
-
-### Two key principles
-
-#### One sense per collocation
-
-A word tends to have the same sense when it occurs with the same nearby words or collocations.
-
-```text
-river bank      → river side
-savings bank    → financial institution
-bank account    → financial institution
-bank loan       → financial institution
-```
-
-So, if `bank` appears with `river`, `water`, or `shore`, it likely means **river side**. If it appears with `money`, `deposit`, `loan`, or `account`, it likely means **financial institution**.
-
-#### One sense per discourse
-
-Within the same document or discourse, an ambiguous word usually keeps the same sense.
-
-Example:
-
-```text
-"The bank approved the loan. The bank also increased interest rates."
-```
-
-Both uses of `bank` are likely to mean **financial institution**.
-
-### Algorithm steps
-
-#### Step 1: Start with seed examples
-
-Choose a small number of manually labelled examples for each sense.
-
-For the word `bank`:
-
-| Sense | Seed examples |
+| Term | Meaning |
 |---|---|
-| Financial institution | “I deposited money in the bank.” |
-| River side | “We sat on the bank of the river.” |
+| Target word | The ambiguous word to disambiguate (e.g. `bank`) |
+| Sense | One possible meaning of the word |
+| Gloss | The dictionary definition of a sense |
+| Context | The words surrounding the target word (sentence or a window) |
+| Overlap | Number of words shared between two bags of words |
+| Signature | The bag of words used to represent a sense (its gloss, possibly expanded) |
 
-#### Step 2: Extract features
+### Basic formula
 
-For every occurrence of the target word in the unlabelled corpus, extract features such as:
+For a target word $w$ with senses $s_1, s_2, \ldots, s_m$, the score of each sense is the overlap between its signature and the context:
 
-```text
-- Nearby words
-- Collocations
-- Previous and next words
-- POS tags
-- Sentence-level context
-- Document-level context
-```
+$$
+\text{score}(s_i) = \left| \text{signature}(s_i) \cap \text{context}(w) \right|
+$$
 
-Example:
+The chosen sense is the one with the highest score:
 
-```text
-Sentence: "The bank approved my loan."
+$$
+\hat{s} = \underset{s_i \in \text{Senses}(w)}{\arg\max} \; \text{score}(s_i)
+$$
 
-Target word: bank
-Features: approved, my, loan, finance-related words
-```
-
-#### Step 3: Build an initial classifier
-
-Using the seed examples, train a simple classifier. Yarowsky commonly uses a **decision-list learner**.
-
-A decision list contains rules such as:
-
-```text
-If context contains "river" → river side
-If context contains "deposit" → financial institution
-If context contains "loan" → financial institution
-```
-
-#### Step 4: Label unlabelled examples
-
-Apply the current classifier to unlabelled examples. Assign a sense only when the classifier is confident enough.
-
-```text
-If P(financial institution | context) > threshold
-→ label bank as financial institution
-```
-
-Low-confidence examples remain unlabelled for the next iteration.
-
-#### Step 5: Add confident examples to training data
-
-The newly labelled high-confidence examples are added to the seed set.
-
-```text
-Initial seed data + newly labelled examples
-→ enlarged labelled training set
-```
-
-#### Step 6: Repeat until convergence
-
-```text
-Train classifier
-→ label unlabelled data
-→ select high-confidence examples
-→ add them to training set
-→ retrain classifier
-```
-
-The algorithm stops when no new reliable examples or rules can be added, or when labels become stable.
-
-### Example: bank
-
-Suppose the target word is `bank`, with two senses:
-
-```text
-Sense A: financial institution
-Sense B: river side
-```
-
-#### Initial seed examples
-
-```text
-"I deposited money in the bank." → financial institution
-"We sat on the bank of the river." → river side
-```
-
-#### First iteration
-
-The classifier learns rules:
-
-```text
-money → financial institution
-deposit → financial institution
-river → river side
-water → river side
-```
-
-It then labels unlabelled sentences:
-
-```text
-"The bank approved my loan." → financial institution
-"The river bank was muddy." → river side
-```
-
-#### Second iteration
-
-The newly labelled examples are added to training data:
-
-```text
-loan → financial institution
-approved → financial institution
-muddy → river side
-```
-
-The classifier becomes stronger and can label more unlabelled examples.
-
-### Decision-list learning
-
-Yarowsky uses a decision-list learner that selects high-precision rules.
-
-A rule has the form:
-
-```text
-If feature f occurs, predict sense j
-```
-
-Examples:
-
-```text
-If "loan" occurs → financial institution
-If "river" occurs → river side
-```
-
-The algorithm calculates confidence using:
-
-\[
-P(\text{sense} \mid \text{feature})
-\]
-
-Rules with the highest confidence are placed at the top of the decision list.
-
-### Advantages
-
-- Requires only a small labelled seed set
-- Can use a large amount of unlabelled text
-- Reduces manual annotation cost
-- Iteratively improves the classifier
-- Useful when labelled WSD data is scarce
-
-### Limitations
-
-- Initial seed examples must be carefully chosen
-- Wrong early labels can propagate and reduce accuracy
-- May become biased toward the majority sense
-- Needs confidence thresholds and stopping criteria
-- Works best when the two Yarowsky assumptions hold
-
-> [!tip] Interview-ready answer
-> Yarowsky bootstrapping is a semi-supervised WSD method that starts with a small set of manually labelled seed examples and a large unlabelled corpus. It trains an initial classifier on the seed examples, applies it to unlabelled data, and adds only high-confidence predictions to the labelled set. This enlarged set is used to retrain the classifier, and the process repeats. It relies on two assumptions: **one sense per collocation** and **one sense per discourse**.
+Here $|A \cap B|$ means the number of words common to both sets $A$ and $B$.
 
 ---
 
-## Quick Revision
+### Steps of the (Simplified) Lesk algorithm
+
+We use this running example:
+
+**Sentence:** "I deposited money in the bank."
+**Target word:** `bank`
+
+#### Step 1: Identify the target word
+
+Pick the ambiguous word to be disambiguated.
 
 ```text
-Supervised WSD → trains classifier using sense-tagged corpus
-Features → surrounding words, POS tags, collocations, embeddings
-Naive Bayes → probabilistic classifier using Bayes theorem
-Naive assumption → features are independent given the sense
-Yarowsky → semi-supervised bootstrapping using seed data
-One sense per collocation → same nearby words imply same sense
-One sense per discourse → same sense within a document
+Target word = bank
 ```
+
+#### Step 2: Retrieve all senses and glosses from the dictionary
+
+Look up every sense of the target word. (Glosses below are simplified from WordNet.)
+
+| Sense | Gloss |
+|---|---|
+| bank#1 | a financial institution that accepts deposits and channels the money into lending activities |
+| bank#2 | sloping land beside a body of water |
+| bank#3 | a building in which the business of banking is transacted |
+
+#### Step 3: Extract the context
+
+Take the words around the target word. The context can be the whole sentence or a window (for example, 5 words on each side).
+
+```text
+Context = I, deposited, money, in, the
+```
+
+(The target word itself is not part of the context.)
+
+#### Step 4: Preprocess both glosses and context
+
+Apply these to the context and to every gloss:
+
+1. Convert to lowercase.
+2. Remove **stop words** (I, in, the, a, of, that, and, into, ...).
+3. **Lemmatize or stem** words (deposited → deposit, deposits → deposit, accepts → accept).
+4. Remove the target word itself.
+
+Result:
+
+| Item | Preprocessed bag of words |
+|---|---|
+| Context | {deposit, money} |
+| bank#1 gloss | {financial, institution, accept, deposit, channel, money, lend, activity} |
+| bank#2 gloss | {slope, land, beside, body, water} |
+| bank#3 gloss | {building, business, transact} |
+
+#### Step 5: Count the overlap for each sense
+
+Count the words common to the context and each gloss.
+
+| Sense | Common words | Overlap score |
+|---|---|---:|
+| bank#1 | deposit, money | **2** |
+| bank#2 | none | 0 |
+| bank#3 | none | 0 |
+
+#### Step 6: Choose the sense with the maximum overlap
+
+$$
+\hat{s} = \underset{s_i}{\arg\max} \; \text{score}(s_i) = \text{bank#1}
+$$
+
+**Output:** `bank` = *financial institution*. This is correct.
+
+#### Step 7: Handle ties and zero overlap
+
+- If several senses tie, pick the **most frequent sense** (in WordNet, sense #1).
+- If all scores are 0, also fall back to the **most frequent sense**.
+
+---
+
+### Example where the simple version fails
+
+**Sentence:** "We sat on the bank of the river."
+
+```text
+Context (after preprocessing) = {sit, river}
+```
+
+| Sense | Overlap with {sit, river} |
+|---|---:|
+| bank#1 | 0 |
+| bank#2 | 0 |
+| bank#3 | 0 |
+
+The gloss of bank#2 says "body of water", but never uses the word `river`. So all scores are 0 and the algorithm falls back to the most frequent sense (bank#1), which is **wrong**.
+
+This weakness led to the **original Lesk** version below, which also uses the glosses of the context words.
+
+---
+
+### Original Lesk algorithm
+
+The original algorithm does not compare glosses with context **words**. It compares the glosses of the senses of the target word with the **glosses of the senses of the context words**.
+
+$$
+\text{score}(s_i) = \sum_{w_j \in \text{context}} \; \max_{s_{jk} \in \text{Senses}(w_j)} \left| \text{gloss}(s_i) \cap \text{gloss}(s_{jk}) \right|
+$$
+
+In words: for each context word $w_j$, find the sense $s_{jk}$ of that word whose gloss overlaps most with the gloss of the target sense $s_i$, then add up these best overlaps.
+
+#### Steps with the classic example: "pine cone"
+
+**Step 1: Target words.** Both `pine` and `cone` are ambiguous, so disambiguate them together.
+
+**Step 2: Get the senses and glosses.**
+
+| Sense | Gloss |
+|---|---|
+| pine#1 | kinds of evergreen tree with needle-shaped leaves |
+| pine#2 | waste away through sorrow or illness |
+| cone#1 | solid body which narrows to a point |
+| cone#2 | something of this shape whether solid or hollow |
+| cone#3 | fruit of certain evergreen trees |
+
+**Step 3: Preprocess** (remove stop words, lemmatize `trees` → `tree`).
+
+| Sense | Bag of words |
+|---|---|
+| pine#1 | {kind, evergreen, tree, needle-shaped, leaf} |
+| pine#2 | {waste, away, sorrow, illness} |
+| cone#1 | {solid, body, narrow, point} |
+| cone#2 | {something, shape, solid, hollow} |
+| cone#3 | {fruit, certain, evergreen, tree} |
+
+**Step 4: Compute the overlap for every sense pair.**
+
+| | cone#1 | cone#2 | cone#3 |
+|---|---:|---:|---:|
+| **pine#1** | 0 | 0 | **2** (evergreen, tree) |
+| **pine#2** | 0 | 0 | 0 |
+
+**Step 5: Pick the best combination.** The highest overlap is 2, for pine#1 and cone#3.
+
+**Output:**
+
+- `pine` = *evergreen tree*
+- `cone` = *fruit of an evergreen tree*
+
+#### Second example: "bank" and "river"
+
+**Sentence:** "We sat on the bank of the river."
+
+Using the original Lesk idea, we also look up the gloss of `river`:
+
+| Sense | Gloss (preprocessed) |
+|---|---|
+| river#1 | {large, natural, stream, water} |
+| bank#1 | {financial, institution, accept, deposit, channel, money, lend, activity} |
+| bank#2 | {slope, land, beside, body, water} |
+
+| Pair | Common words | Score |
+|---|---|---:|
+| bank#1 and river#1 | none | 0 |
+| bank#2 and river#1 | water | **1** |
+
+So `bank` = bank#2 (*sloping land beside water*), which is **correct**. The word `water` links the two glosses even though the sentence never said it.
+
+---
+
+### Extended Lesk (Banerjee and Pedersen, 2002)
+
+The glosses in a dictionary are very short, so overlaps are often 0. **Extended Lesk** makes each signature longer by adding the glosses of **related senses** from WordNet:
+
+- hypernyms (more general: *bank* → *slope*)
+- hyponyms (more specific)
+- meronyms and holonyms (part and whole)
+- similar-to and see-also relations
+
+$$
+\text{signature}(s_i) = \text{gloss}(s_i) \;\cup\; \text{gloss}(\text{hypernyms}) \;\cup\; \text{gloss}(\text{hyponyms}) \;\cup\; \ldots
+$$
+
+It also rewards **longer matches**. An overlap of $k$ consecutive words scores $k^2$ instead of $k$:
+
+$$
+\text{score} = \sum_{\text{overlaps}} k^2
+$$
+
+For example, a shared phrase `body of water` (3 words) scores $3^2 = 9$, while three separate shared words score only $1 + 1 + 1 = 3$.
+
+**Example (illustrative):** for "He fished from the bank of the river", the expanded signature of bank#2 includes words from related glosses (such as *land*, *water*, *slope*). The context words `fish` and `river`, expanded with their own glosses (such as *water*, *stream*, *swim*), now share `water` with bank#2 and none with bank#1. So bank#2 wins.
+
+---
+
+### Pseudocode (Simplified Lesk)
+
+```text
+function SimplifiedLesk(word, sentence):
+    best_sense  = most_frequent_sense(word)
+    max_overlap = 0
+    context     = preprocess(words in sentence, excluding word)
+
+    for each sense in senses(word):
+        signature = preprocess(gloss(sense))
+        overlap   = |signature ∩ context|
+        if overlap > max_overlap:
+            max_overlap = overlap
+            best_sense  = sense
+
+    return best_sense
+```
+
+### Code example (NLTK)
+
+```python
+from nltk.wsd import lesk
+from nltk.tokenize import word_tokenize
+
+sentence = "I deposited money in the bank"
+sense = lesk(word_tokenize(sentence), "bank", pos="n")
+
+print(sense)               # a WordNet synset
+print(sense.definition())  # its gloss
+```
+
+(You need `nltk`, plus the `wordnet` and `punkt` data packages.)
+
+---
+
+### Comparison of Lesk variants
+
+| Variant | Compares | Strength | Weakness |
+|---|---|---|---|
+| Simplified Lesk | Sense glosses with context words | Fast and simple | Fails when the gloss and context share no words |
+| Original Lesk | Sense glosses with glosses of context senses | Finds indirect links | Slow, since it checks many sense pairs |
+| Extended Lesk | Expanded glosses (related senses) with the context | Fewer zero-overlap cases | Needs WordNet relations and is more complex |
+
+### Advantages
+
+- Needs **no sense-annotated corpus**, so it is cheap to apply
+- Simple and easy to implement
+- Works for any word that has a dictionary entry
+- Easy to explain, since the chosen sense comes with an overlap count
+
+### Limitations
+
+- Very sensitive to the **exact wording** of dictionary glosses
+- Glosses are short, so overlap is often 0 or ties are common
+- Stop-word handling and lemmatization strongly affect the result
+- The original version is computationally expensive for long sentences
+- Usually less accurate than supervised methods
+- Ignores word order and syntax
+
+### Supervised WSD vs Lesk
+
+| Point | Supervised (Naive Bayes) | Lesk |
+|---|---|---|
+| Needs labelled corpus | Yes | No |
+| Knowledge source | Training data | Dictionary glosses |
+| Accuracy | Higher with enough data | Lower |
+| Type | Machine learning | Knowledge-based |
+
+### Interview-ready answer
+
+> The Lesk algorithm is a dictionary-based WSD method. For an ambiguous word, it retrieves the gloss of each sense from a dictionary such as WordNet, preprocesses the glosses and the context by removing stop words and lemmatizing, and counts the overlapping words between each gloss and the context. The sense with the highest overlap is chosen, with the most frequent sense as a fallback for ties. The original version compares glosses of the context words' senses, and Extended Lesk adds glosses of related senses and rewards longer overlaps. Its main weakness is its dependence on the exact wording of the glosses.
+> 

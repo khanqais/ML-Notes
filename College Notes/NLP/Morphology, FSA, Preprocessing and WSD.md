@@ -1,8 +1,5 @@
 ---
 tags:
-  - NLP
-  - semester-notes
-  - exam-prep
 ---
 
 <<<<<<< HEAD

@@ -1,169 +1,168 @@
+---
+tags: [NLP, stemming, porter, exam, mumbai-university]
+subject: Natural Language Processing
+---
+
 # Porter Stemming Algorithm
 
-## Definition
-Porter Stemming is a rule-based algorithm used in NLP to reduce English words to their root/stem form by removing common suffixes.
+## 1. Definition
 
-Example:  
-- running → run  
-- connected → connect  
-- studies → studi  
+**Porter Stemming** is a **rule-based** algorithm used in NLP to reduce English words to their **root/stem** form by removing common suffixes. Developed by **Martin Porter in 1980**.
 
-It was developed by Martin Porter in 1980.
+| Word | Stem |
+|---|---|
+| running | run |
+| connected | connect |
+| studies | studi |
 
-## Prerequisites
+> [!note]
+> The stem need not be a real word (studies → studi).
 
-### 1. Vowels and Consonants
-- Vowels: a, e, i, o, u
-- Consonants: all other letters
-- `y` is a vowel if the previous letter is a consonant.  
-  Example: In `happy`, `y` is a vowel.
+---
 
-### 2. Word Form
-Every word can be written as:
+## 2. Prerequisites
 
-`[C](VC)^m[V]`
+### Vowels and Consonants
+- **Vowels:** a, e, i, o, u
+- **Consonants:** all other letters
+- **y** is a vowel if the previous letter is a consonant (happy → y is a vowel).
 
-Where:
-- `C` = consonant group
-- `V` = vowel group
-- `m` = measure
+### Word Form
 
-### 3. Measure (m)
-`m` is the number of `VC` groups in a word.
+$$[C](VC)^m[V]$$
 
-Examples:
-- `tree` → m = 0
-- `trouble` → m = 1
-- `private` → m = 2
+- C = consonant group, V = vowel group
+- **m = measure** = number of VC groups
 
-The measure helps decide whether a suffix can be removed.
+| Word | Form | m |
+|---|---|---|
+| tree | CV | 0 |
+| trouble | C VC V | 1 |
+| private | C VC VC V | 2 |
 
-## Step 1a: Plural Removal
+> [!important]
+> The measure **m** decides whether a suffix can be removed.
 
-Rules:
-- `sses → ss`
-- `ies → i`
-- `ss → ss`
-- `s → ""`
+---
 
-Examples:
-- caresses → caress
-- ponies → poni
-- cats → cat
+## 3. Steps of the Algorithm
 
-## Step 1b: Remove -ed and -ing
+```mermaid
+flowchart LR
+    A[Word] --> B[Step 1a/1b/1c] --> C[Step 2] --> D[Step 3] --> E[Step 4] --> F[Step 5] --> G[Stem]
+```
 
-Rules:
-- If `m > 0`: `eed → ee`
-- If stem contains a vowel:
-  - `ed → ""`
-  - `ing → ""`
+### Step 1a: Plural Removal
 
-Examples:
-- agreed → agree
-- plastered → plaster
-- running → runn → run
+| Rule | Example |
+|---|---|
+| sses → ss | caresses → caress |
+| ies → i | ponies → poni |
+| ss → ss | caress → caress |
+| s → (remove) | cats → cat |
 
-After removing `ed` or `ing`:
-- `at → ate`
-- `bl → ble`
-- `iz → ize`
+### Step 1b: Remove -ed / -ing
 
-Examples:
-- conflated → conflate
-- troubled → trouble
+| Rule | Example |
+|---|---|
+| (m>0) eed → ee | agreed → agree |
+| (stem has vowel) ed → (remove) | plastered → plaster |
+| (stem has vowel) ing → (remove) | running → runn |
 
-## Step 1c: Replace y with i
+**Cleanup after removing ed/ing:**
 
-Rule:
-- If stem contains a vowel: `y → i`
+| Rule | Example |
+|---|---|
+| at → ate | conflated → conflate |
+| bl → ble | troubled → trouble |
+| iz → ize | sized → size |
+| double consonant (not l, s, z) → single | runn → run |
 
-Examples:
-- happy → happi
-- enjoy → enjoi
-- sky → sky (no change, because stem has no vowel)
+### Step 1c: y → i
 
-## Step 2: Derivational Suffixes
+**Rule:** if the stem contains a vowel, y → i
 
-Important rules:
-- `ational → ate`
-- `tional → tion`
-- `izer → ize`
-- `fulness → ful`
-- `ousness → ous`
-- `biliti → ble`
+| Example | Reason |
+|---|---|
+| happy → happi | stem "happ" has a vowel |
+| enjoy → enjoi | stem "enjo" has a vowel |
+| sky → sky | stem "sk" has no vowel, so no change |
 
-Examples:
-- relational → relate
-- conditional → condition
-- hopefulness → hopeful
+### Step 2: Derivational Suffixes (m > 0)
 
-## Step 3: Remove More Suffixes
+| Rule | Example |
+|---|---|
+| ational → ate | relational → relate |
+| tional → tion | conditional → condition |
+| izer → ize | digitizer → digitize |
+| fulness → ful | hopefulness → hopeful |
+| ousness → ous | callousness → callous |
+| biliti → ble | sensibiliti → sensible |
 
-Important rules:
-- `icate → ic`
-- `ative → ""`
-- `alize → al`
-- `ical → ic`
-- `ful → ""`
-- `ness → ""`
+### Step 3: Remove More Suffixes (m > 0)
 
-Examples:
-- hopeful → hope
-- goodness → good
-- electrical → electric
+| Rule | Example |
+|---|---|
+| icate → ic | triplicate → triplic |
+| ative → (remove) | formative → form |
+| alize → al | formalize → formal |
+| ical → ic | electrical → electric |
+| ful → (remove) | hopeful → hope |
+| ness → (remove) | goodness → good |
 
-## Step 4: Remove Remaining Suffixes
+### Step 4: Remove Remaining Suffixes (only if m > 1)
 
-Most suffixes are removed only if `m > 1`.
+Suffixes: **al, ance, ence, er, ment, ion, ate, ous, ive**
 
-Important rules:
-- `al → ""`
-- `ance → ""`
-- `ence → ""`
-- `er → ""`
-- `ment → ""`
-- `ion → ""` only if stem ends with `s` or `t`
-- `ate → ""`
-- `ous → ""`
-- `ive → ""`
+- **ion** is removed only if the stem ends with **s** or **t**.
 
-Examples:
-- revival → reviv
-- adjustment → adjust
-- adoption → adopt
+| Example | Result |
+|---|---|
+| revival | reviv |
+| adjustment | adjust |
+| adoption | adopt |
 
-## Step 5: Final Cleanup
+### Step 5: Final Cleanup
 
-### Step 5a: Remove final e
-- If `m > 1`: remove final `e`
-- If `m = 1` and stem does not end in CVC: remove final `e`
+**5a: Remove final e**
+- If m > 1: remove final e (probate → probat)
+- If m = 1 and stem does **not** end in CVC: remove final e
+- Otherwise keep it (rate → rate)
 
-Examples:
-- probate → probat
-- rate → rate
+**5b: Remove double l**
+- If m > 1 and word ends with **ll**: remove one l (controll → control)
 
-### Step 5b: Remove double l
-- If `m > 1` and word ends with `ll`: remove one `l`
+---
 
-Example:
-- controll → control
+## 4. Solved Example: relational
 
-## Example
-`relational`
+| Step | Rule applied | Result |
+|---|---|---|
+| Step 1 | no rule applies | relational |
+| Step 2 | ational → ate | relate |
+| Step 3, 4 | no rule applies | relate |
+| Step 5a | m = 2 (> 1), remove final e | **relat** |
 
-Step 2: `ational → ate`  
-So, `relational → relate`
+**Final stem: relat**
 
-Step 5a: remove final `e`  
-Final stem: `relat`
+---
 
-## Advantages
+## 5. Advantages
 - Simple and fast
-- Useful for search engines
-- Reduces different forms of a word to one stem
+- Useful in search engines and information retrieval
+- Reduces different forms of a word to one stem (smaller index)
 
-## Disadvantages
-- Output may not be a real word
-- Example: `studies → studi`
-- Less accurate than lemmatization
+## 6. Disadvantages
+- Output may not be a real word (studies → studi)
+- Less accurate than **lemmatization** (which uses a dictionary and gives valid words)
+- English only; can over-stem or under-stem
+
+---
+
+## 7. Quick Revision
+- Algorithm is **rule-based**, suffix stripping, **5 steps**
+- **m** decides whether a suffix is removed
+- Step 1: plurals, -ed/-ing, y → i
+- Step 2 and 3: m > 0, Step 4: m > 1
+- Step 5: final e and double l cleanup
+- Stem may not be a valid word
