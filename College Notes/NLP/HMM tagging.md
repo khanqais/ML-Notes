@@ -9,13 +9,10 @@ to solve this we can make a bigram trigram and compared all of them to find the 
 This is called **sparsity**: many valid combinations are missing from limited training data. Using longer word sequences—trigrams, four-grams, etc.—makes exact matches even harder to find.[aclanthology](https://aclanthology.org/N09-2054.pdf)
 
 ## 2. How does an HMM help?
-
 Instead of requiring the exact word pair, it combines two reusable probabilities:
 
-- Transition: P(next tag∣previous tag)P(\text{next tag}\mid\text{previous tag})P(next tag∣previous tag), such as how likely `N → M` is.
-    
-- Emission: P(word∣tag)P(\text{word}\mid\text{tag})P(word∣tag), such as how likely the tag `M` is to produce “will.”[web.stanford](https://web.stanford.edu/~jurafsky/slp3/old_dec21/8.pdf)
-    
+- **Transition:** $P(\text{next tag} \mid \text{previous tag})$, such as how likely `N → M` is.
+- **Emission:** $P(\text{word} \mid \text{tag})$, such as how likely the tag `M` is to produce "will."
 
 So even without seeing `Jane will` together, it can combine evidence that Jane occurs as a noun, “will” occurs as a modal, and nouns can be followed by modals
 ![[Pasted image 20261109195906.png]]![[Pasted image 20261109195930.png]]![[Pasted image 20261109195942.png]]![[Pasted image 20261109200010.png]]![[Pasted image 20261109200023.png]]![[Pasted image 20261109200035.png]]

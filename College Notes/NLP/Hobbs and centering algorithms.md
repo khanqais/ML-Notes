@@ -3,7 +3,7 @@
 ![[Pasted image 20261108172345.png]]
 ![[Screenshot 2026-11-08 171708.png]]
 
-
+![[Screenshot_20261121-030326.png]]
 # Centering Algorithm
 
 **Centering Theory** is an NLP method used to understand how the **focus/center of a conversation or text shifts from one sentence to the next**. It helps a computer resolve which noun or pronoun refers to which entity.
