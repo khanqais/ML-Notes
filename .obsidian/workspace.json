@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "College Notes/MIS/Module 1/CBIS.md",
-                "mode": "preview",
+                "file": "Meeting Process.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CBIS"
+              "title": "Meeting Process"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.4858856201172
+    "width": 248.1691436767578
   },
   "right": {
     "id": "7d2c3ace1addb501",
@@ -197,10 +197,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "96db0ab460cfd657",
+  "active": "132b602b7402c7e6",
   "lastOpenFiles": [
-    "College Notes/MIS/Module 1/How IS impact Society.md",
+    "College Notes/MIS/Module 6/TPS and ERP.md",
+    "College Notes/MIS/Module 6",
+    "Attachments/Screenshot_2026-11-26-23-30-58-313.png",
+    "Untitled.base",
+    "Meeting Process.md",
     "College Notes/MIS/Module 1/CBIS.md",
+    "College Notes/MIS/Module 1/How IS impact Society.md",
     "College Notes/MIS/Module 1/How IS impact the organization and society.md",
     "College Notes/MIS/Cybersecurity.md",
     "College Notes/MIS/Data Governance and how to secure ti.md",
@@ -229,8 +234,6 @@
     "College Notes/BC/Module 3/Multiplelevel inheritance.md",
     "College Notes/BC/Module 3/Fallback.md",
     "College Notes/BC/Module 3/Dynamic array and static.md",
-    "College Notes/BC/Module 2/UTXO.md",
-    "College Notes/BC/Module 2/Hot wallet and cold wallet.md",
     "College Notes/BC/Module 3",
     "College Notes/BC/Module 2",
     "College Notes/BC/Module 1",
@@ -244,10 +247,7 @@
     "Attachments/Screenshot_20261117-204840.png",
     "Attachments/Screenshot_20261117-204600.png",
     "Attachments/Screenshot_20261117-204533.png",
-    "Attachments/Screenshot_20261117-204514.png",
-    "Untitled.base",
     "College Notes/NLP/Module 1",
-    "Docker",
     "Web Security/Client-Side Security/Untitled.canvas"
   ]
 }
